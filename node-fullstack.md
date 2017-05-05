@@ -18,7 +18,7 @@ Thus, this feature includes maintaining the full list of document versions - sin
 
   
 
-Describe, in a general way, how would you approach the implementation of such feature, namely on how documents and versions would be persisted in data. Note that documents are expected to grow significantly in size. (Again, feel free to include any diagram or image you deem useful to support your explanation.)
+Describe, in a general way, how would you approach the implementation of such feature, namely on how documents and versions would be persisted in data. Note that documents are expected to grow significantly in content size. (Again, feel free to include any diagram or image you deem useful to support your explanation.)
 
 ## Question 4 - Document Conversion Queuing Service
 
@@ -32,7 +32,7 @@ The interface is very simple and comprises only of the following screen.
 
 **What we'll be looking at:** compliance with the requirements below; a solid implementation using AngularJS; adherence to Angular 1.x best practices and code style guides; functionality; code clarity and organisation.
 
-**What we'll value as a plus:** clean and pleasant interpretation of the mockups/UI while keeping functionality; good CSS/style organisation and conventions.
+**What we'll value as a plus:** clean and pleasant interpretation of the mockups/UI while keeping functionality; good CSS/style organisation and conventions observance.
 
 ### Server/Queuing Service
 
@@ -57,15 +57,16 @@ To help the prompt assessment of the assignment, the following requirements are 
   * A `README.md` at repo root containing all the instructions to run the project and additional information you find necessary;
   * The install/config/build process shouldn't be much more than running `npm install` and `npm run start`;
 * **Client:**
-  * Use vanilla JS;
-  * Use **AngularJS 1.x**, refrain from using angular-cli;
-  * Client dependencies should be managed using [Bower](https://bower.io);
+  * Implement in Javascript;
+  * Use **AngularJS 1.x**, refrain from using angular-cli (and if you do please trim/remove all unnecessary generated boilerplate code before submiting);
+  * Client dependencies should be managed using [npm](https://www.npmjs.com) or [Bower](https://bower.io);
   * Resort to [grunt](https://gruntjs.com) (or [gulp](http://gulpjs.com) at most) for building/minification;
-  * If you need s CSS preprocessor use [Sass](http://sass-lang.com);
+  * If want to use a CSS preprocessor use [Sass](http://sass-lang.com);
 * **Server:**
-  * The server must be built in **Node.js** (latest LTS or latest current version) and [Express.js](http://expressjs.com);
+  * Implement in Javascript;
+  * The server must be built in **Node.js** (latest LTS) and [Express.js](http://expressjs.com);
   * If you wish to persist data, use [MongoDB](https://www.mongodb.com) - you can assume we will have a MongoDB instance (latest stable release) running with 'out of the box' default config;
-  * Use **npm** for server package/dependency management, state all dependencies, and don't assume globally installed tools/cli/packages;
+  * Use **npm** for server package/dependency management, state all dependencies, and avoid assuming globally installed tools/cli/packages;
   * Your solution should use a queueing system, feel free to use any library to help with the implementation of the queue if you wish;
   * An artificial timeout should be added to all requests as per above and for demonstration purposes;
   * The system should implement priority to optimize availability, having HTML requests (quicker) preempt PDF requests (longer), priority and scheduling policy details are up to you to define;
