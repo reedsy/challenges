@@ -20,19 +20,27 @@ Describe, in a general way, how would you approach the implementation of such fe
 
 ## Question 4 - Document Conversion Queuing Service
 
-Implement a small text conversion queueing service (server and a simple single page web interface) using Node.js and AngularJS 1.x.
+Implement a small text conversion queueing service (server and a simple single page web interface) using Node.js (latest LTS) and AngularJS 1.x.
 
-### Web Interface
+### Front-end / Web Interface
 
-The interface is very simple and comprises only of the following screen.
+The interface is very simple and comprises only of the following screen. You don't need to implement actual file upload and conversion, we just need list of tasks to visualise real-time processing:
 
 ![](https://gist.githubusercontent.com/pedrosanta/ae0c133195fdcdb9663a41bb0cfb253a/raw/d91f7e00776fa576ba3b7ce6d094936dd158cb8f/1-conversions-screen.png)
 
-**What we'll be looking at:** compliance with the requirements below; a solid implementation using AngularJS; adherence to Angular 1.x best practices and code style guides; functionality; code clarity and organisation.
+#### What we'll be looking at
 
-**What we'll value as a plus:** clean and pleasant interpretation of the mockups/UI while keeping functionality; good CSS/style organisation and conventions observance.
+* solid implementation using AngularJS 1.x
+* adherence to Angular 1.x best practices and code style guides
+* functionality (UI shouldn't break and clearly visualise functional limits)
+* code clarity, modularisation and organisation
 
-### Server/Queuing Service
+#### What we'll value as a plus
+
+* clean and pleasant interpretation of the mockups/UI while keeping functionality
+* good CSS / style organisation and conventions observance
+
+### Back-end / Queuing Service
 
 The server should implement a queuing system for the conversion requests: receive the request from the client/web interface, puts that request on a queue and replies back to the client with information about the queued request. After the request is processed **(optionally, check 4.1)** it can inform the client/web interface of it in some way.
 
