@@ -6,7 +6,7 @@ Write a couple paragraphs about yourself, your hobbies, your major achievement a
 
 ## Question 2
 
-**Operational Transformation** is a very popular algorithm that - along with a multitude of related technologies - supports the implementation of collaborative and concurrent editing of documents. Explain, **in your own words** and in a clear way, the general working of this algorithm/technology. (Feel free to include any diagram or image you deem useful to support your explanation.)
+**Operational Transformation** is a very popular algorithm that - along with a multitude of related technologies - supports the implementation of collaborative and concurrent editing of documents. Explain, **in your own words** and in a clear way, the general working of this algorithm/technology. Feel free to include any diagram, (pseudo)code example or image you deem useful to support your explanation. If you're not familiar with the OT algorithm - it's ok, there's plenty of resources to read before answering. It's important for us to know your capacity to learn, extract valuable information and present technical ideas to others.
 
 ## Question 3
 
