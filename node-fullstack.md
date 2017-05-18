@@ -6,21 +6,21 @@ Write a couple paragraphs about yourself, your hobbies, your major achievement a
 
 ## Question 2
 
-**Operational Transformation** is a very popular algorithm that - along with a multitude of related technologies - supports the implementation of collaborative and concurrent editing of documents. Explain, **in your own words** and in a clear way, the general working of this algorithm/technology. Feel free to include any diagram, (pseudo)code example or image you deem useful to support your explanation. If you're not familiar with the OT algorithm - it's ok, there's plenty of resources to read before answering. It's important for us to know your capacity to learn, extract valuable information and present technical ideas to others.
+**Operational Transformation** is a very popular algorithm that - along with a multitude of related technologies - supports the implementation of collaborative and concurrent editing of documents. Explain, **in your own words** and in a clear way, the general working of this algorithm. Feel free to include any diagram, (pseudo)code excerpt or image you deem useful to support your explanation. If you're not familiar with the OT algorithm - it's ok, there's plenty of resources to read before answering. It's important for us to know your capacity to learn, extract valuable information and present technical ideas to others.
 
 ## Question 3
 
-Consider a scenario where you're storing documents in a text-based format (plain text, XML/HTML, Markdown, JSON/[Delta](https://quilljs.com/docs/delta), etc) and you need to implement a document versioning feature. While working on the document, the user will have the option to save a version to 'tag' a specific state of the document.
+Consider a scenario where you're storing documents in a text-based format (plain text, XML / HTML, Markdown, JSON / [Delta](https://quilljs.com/docs/delta), etc) and you need to implement a document versioning feature. While working on the document, the user will have the option to save a version to *tag* a specific state of the document.
 
-Thus, this feature includes maintaining the full list of document versions - since it's creation up to it's current state - that should be available for the user to browse - in a way that it should be possible to visualise the diff/differences between any two versions like the image below.
+Thus, this feature includes maintaining the full list of document versions - since it's creation up to it's current state - that should be available for the user to browse - in a way that it should be possible to visualise the diff between any two versions like the image below.
 
 ![](http://content.gcflearnfree.org/topics/174/wd10_reviewing_example.png)
 
-Describe, in a general way, how would you approach the implementation of such feature, namely on how documents and versions would be persisted, accessed or compared. (Again, feel free to include any diagram or image you deem useful to support your explanation.). Justify your decision by explaining pros and cons of important features (reliability, performance, infrastructure requirements, ease of use) and how these will change with growing volume of documents. Note that documents are expected to also grow significantly in content size. There's plenty of solutions out there for this or similar problems which should help you get started and see what are the actual challenges.
+Describe, in a general way, how would you approach the implementation of such feature, namely on how documents and versions would be persisted, accessed or compared. Again, feel free to include any diagram or image you deem useful to support your explanation. Focus on the back-end part, don't worry about the actual UI or diff presentation. Justify your decision by explaining pros and cons of important features (reliability, performance, infrastructure requirements, ease of use) and how these will change with growing volume of documents. Note that documents are expected to also grow significantly in content size. There's plenty of solutions out there for this or similar problems which should help you get started and see what are the actual challenges.
 
 ## Question 4 - Document Conversion Queuing Service
 
-Implement a small text conversion queueing service (server and a simple single page web interface) using Node.js (latest LTS) and AngularJS 1.x.
+Implement a small text conversion queueing service (server and a simple single page web interface) using Node.js and Angular.js.
 
 ### General requirements
 
@@ -38,7 +38,7 @@ The interface is very simple and comprises only of the following screen. You don
 
 ### Requirements
 
-* implementation using Javascript
+* implement in Javascript or Coffeescript
 * use `AngularJS 1.x`
 * refrain from using `angular-cli`
 * don't bloat code with lots of boilerplate
@@ -65,17 +65,17 @@ The server should implement a queuing system for the conversion requests: receiv
 
 Also, for the sake of demonstration purposes, the processing of each request should consist of a simple timeout, using the [`setTimeout`](https://nodejs.org/api/timers.html#timers_settimeout_callback_delay_args) method:
 
-* **HTML requests**: 10 seconds of timeout
-* **PDF requests**: 100 seconds of timeout
+* HTML requests: 10 seconds of timeout
+* PDF requests: 100 seconds of timeout
 
-The requests for HTML conversions should have more priority than PDF conversions, meaning that if there is one PDF request followed by a few HTML requests on the queue, the system should make an effort to process the HTML ones first as they are quicker. To make it easier allow only one conversion a time (single processing worker). The scheduling policy, the number of HTML requests it processes / preempts over PDF is up to you to define.
+The requests for HTML conversions should have more priority than PDF conversions, meaning that if there is one PDF request followed by a few HTML requests on the queue, the system should make an effort to process the HTML ones first as they are quicker. To make it easier allow only one conversion a time (single processing worker). The scheduling policy, the number of HTML requests it processes / preempts over PDF are up to you to define.
 
 #### Requirements
 
 * implement in Javascript
 * the server must be built in `Node.js` (latest LTS) and [Express.js](http://expressjs.com)
 * if you wish to persist data, use [MongoDB](https://www.mongodb.com) - you can assume we will have a MongoDB instance (latest stable release) running with 'out of the box' default config
-* Use `npm` for server package / dependency management, state all dependencies, and do not assume globally installed tools / cli / packages
+* Use `npm` for server package / dependency management, state all dependencies and do not assume globally installed tools / cli / packages
 * feel free to use any external queue library to help with the implementation if you wish
 
 #### What we'll be looking at:
