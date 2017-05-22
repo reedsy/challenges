@@ -32,7 +32,7 @@ To help the prompt assessment of the assignment, the following requirements are 
 
 ### Front-end / Web Interface
 
-The interface is very simple and comprises only of the following screen. You don't need to implement actual file upload and conversion, we just need list of tasks to visualise jobs processing:
+The interface is very simple and comprises only of the following screen. You don't need to implement actual file upload and conversion, we just need list of tasks to visualise jobs processing. Here's just example wireframe of how it could look like:
 
 ![](https://gist.githubusercontent.com/pedrosanta/ae0c133195fdcdb9663a41bb0cfb253a/raw/d91f7e00776fa576ba3b7ce6d094936dd158cb8f/1-conversions-screen.png)
 
