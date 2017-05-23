@@ -20,7 +20,7 @@ Describe, in a general way, how would you approach the implementation of such fe
 
 ## Question 4 - Document Conversion Queuing Service
 
-Implement a small text conversion queueing service (server and a simple single page web interface) using Node.js and Angular.js.
+Implement a small text conversion queueing service (server and a simple single page web interface) using Node.js and Angular.js 1.x.
 
 ### General requirements
 
