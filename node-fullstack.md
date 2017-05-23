@@ -49,7 +49,7 @@ The interface is very simple and comprises only of the following screen. You don
 #### What we'll be looking at
 
 * solid implementation using AngularJS 1.x
-* adherence to Angular 1.x best practices and code style guides
+* adherence to AngularJS 1.x best practices and code style guides
 * functionality (UI shouldn't break and clearly visualise functional limits)
 * code clarity, modularisation and organisation
 
