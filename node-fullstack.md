@@ -38,7 +38,7 @@ The interface is very simple and comprises only of the following screen. You don
 
 ### Requirements
 
-* implement in Javascript or Coffeescript
+* implement in Javascript
 * use `AngularJS 1.x`
 * refrain from using `angular-cli`
 * don't bloat code with lots of boilerplate
