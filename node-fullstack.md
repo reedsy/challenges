@@ -16,7 +16,7 @@ Thus, this feature includes maintaining the full list of document versions - sin
 
 ![](http://content.gcflearnfree.org/topics/174/wd10_reviewing_example.png)
 
-Describe, in a general way, how would you approach the implementation of such feature, namely on how documents and versions would be persisted, accessed or compared. Again, feel free to include any diagram or image you deem useful to support your explanation. Focus on the back-end part, don't worry about the actual UI or diff presentation. Justify your decision by explaining pros and cons of important features (reliability, performance, infrastructure requirements, ease of use) and how these will change with growing volume of documents. Note that documents are expected to also grow significantly in content size. There's plenty of solutions out there for this or similar problems which should help you get started and see what are the actual challenges.
+Describe, in a general way, how would you approach the implementation of such feature, namely on how documents and versions would be persisted, accessed or compared. Again, feel free to include any diagram or image you deem useful to support your explanation. Focus on the back-end part, don't worry about the actual UI or diff presentation. Justify your decision by explaining pros and cons of important features (reliability, performance, infrastructure / storage requirements, ease of use) and how these will change with growing volume of documents. Note that documents are expected to also grow significantly in content size. There's plenty of solutions out there for this or similar problems which should help you get started and see what are the actual challenges.
 
 ## Question 4 - Document Conversion Queuing Service
 
