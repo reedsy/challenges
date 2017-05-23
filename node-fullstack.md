@@ -85,7 +85,7 @@ The requests for HTML conversions should have more priority than PDF conversions
 * artificial timeouts
 * priority and it's policy
 
-What we'll value as a plus:
+#### What we'll value as a plus:
 
 * test coverage
 * concern with the further scalability of the solution
