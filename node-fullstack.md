@@ -26,6 +26,7 @@
 4. Implement a simple directive (or component) in Angular 1.x with a template composed by two dropdowns and a text input, that requires with `ng-model` and stores the model value as a timestamp (`Date.prototype.getTime()`) but displays it as the day on the first dropdown (ex. '21'), the month abbreviated on second (ex, 'Aug') and the year on on the text input (ex. '2017'). The dropdowns and input are editable, and changes must reflect on model and vice-versa. Add test coverage as you see fit.
 
 5. **Bonus Question**
+
    Implement a ‘model’ for **text edit operation** that encapsulates it's logic in Angular 1.x. An operation can be described as an array of three types of edits: { **move**: <int> } to advance the caret, { **insert**: <string> } to insert the string at caret, and { **delete**: <int> } to delete a number of chars from the caret onwards. Implement the following methods:
    - Operation.prototype.compose(operation) - Updates the operation by ‘adding’/composing it with another one
    - Operation.compose(op1, op2) - Static method that returns a new operation composed by the two without changing any of them
