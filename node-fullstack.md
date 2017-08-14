@@ -30,6 +30,7 @@
    - Operation.prototype.compose(operation) - Updates the operation by ‘adding’/composing it with another one
    - Operation.compose(op1, op2) - Static method that returns a new operation composed by the two without changing any of them
    - Operation.prototype.apply(string) - Applies the described operation on a string
+   
    Examples of compose:
    ```
    [{ move: 1 }, { insert: 'foo' }] + [{ move: 6 }, { insert: 'bar' }] = [{ move: 1 }, { insert: 'foo' }, { move: 5}, { insert: 'bar' } ]
