@@ -1,6 +1,6 @@
 # Node.js Fullstack Engineer Challenge
 
-**Notes: ** You can send this assignment as a single repo/folder with markdown and code. As easier to run the examples ('npm i && npm start') the better, avoid making assumptions about globally installed packages other than 'npm’, 'grunt’ and 'gulp' and we prefer to see implementations in JavaScript.
+**Notes:** You can send this assignment as a single repo/folder with markdown and code. As easier to run the examples ('npm i && npm start') the better, avoid making assumptions about globally installed packages other than 'npm’, 'grunt’ and 'gulp' and we prefer to see implementations in JavaScript.
 
 1. Tell us about one of your commercial projects with Node.js or AngularJS.
 2. Detail how would you persist in data/present a schema to store several versioned text-based documents. It should allow to:
