@@ -5,10 +5,10 @@
 1. Tell us about one of your commercial projects with Node.js and/or AngularJS.
 
 2. Detail how would you persist in data/present a schema to store several versioned text-based documents. It should allow to:
-   a. save a version representing a document state
-   b. keep the versions list/document history for browsing
-   c. browse a previous version and
-   d. visualize the changes/diff between two versions.
+   - save a version representing a document state
+   - keep the versions list/document history for browsing
+   - browse a previous version and
+   - visualize the changes/diff between two versions.
    
    Strive for storage size efficiency.
    
