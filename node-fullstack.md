@@ -1,78 +1,37 @@
 # Node.js Fullstack Engineer Challenge
 
-## Question 1
+**Notes: **You can send this assignment as a single repo/folder with markdown and code. As easier to run the examples ('npm i && npm start') the better, avoid making assumptions about globally installed packages other than 'npm’, 'grunt’ and 'gulp' and we prefer to see implementations in JavaScript.
 
-Write a couple paragraphs about yourself, your hobbies, your major achievement and why do you find Reedsy interesting.
+1. Tell us about one of your commercial projects with Node.js or AngularJS.
+2. Detail how would you persist in data/present a schema to store several versioned text-based documents. It should allow to:
+  a. save a version representing a document state
+  b. keep the versions list/document history for browsing
+  c. browse a previous version and
+  d. visualize the changes/diff between two versions.
+  Strive for storage size efficiency.
+3. Implement a simple server with a processing queue in latest Node LTS using Express.js that will provide an endpoint to receive requests for conversions for different file types (which you should consider to have different processing time). The request should be async, so the server will put the request into a queue for processing and acknowledge/respond it was accepted immediately. When it finishes should simple log it's completion on the console. The processing of these requests **should not be concurrent** (single worker) and consider the following two file types and their processing time: html with 1 sec and  pdf with 5 secs. Here's an example of an request sequence and the processing order we would expect (note how certain html requests were preempted because they take a fifth of a pdf time, optimizing processed files availability):
 
-## Question 2
+  ```
+  // Requests
+  'pdf #1', 'pdf #2', 'html #3', 'html #4', 'html #5', 'html #6', 'html #7', 'html #8', 'pdf #9', 'html #10'
 
-**Operational Transformation** is a very popular algorithm that - along with a multitude of related technologies - supports the implementation of collaborative and concurrent editing of documents. Explain, **in your own words** and in a clear way, the general working of this algorithm/technology. (Feel free to include any diagram or image you deem useful to support your explanation.)
+  // Processing order
 
-## Question 3
+  'pdf #1', 'html #3', 'html #4', 'html #5', 'html #6', 'html #7','pdf #2', 'html #8', 'html #10', 'pdf #9'
+  ```
 
-Consider a scenario where you're storing documents in a text-based format (plain text, XML/HTML, Markdown, JSON/[Delta](https://quilljs.com/docs/delta), etc) and you need to implement a document versioning feature. While working on the document, the user will have the option to save a version to 'tag' a specific state of the document.
+4. Implement a simple directive (or component) in Angular 1.x with a template composed by two dropdowns and a text input, that requires with `ng-model` and stores the model value as a timestamp (`Date.prototype.getTime()`) but displays it as the day on the first dropdown (ex. '21'), the month abbreviated on second (ex, 'Aug') and the year on on the text input (ex. '2017'). The dropdowns and input are editable, and changes must reflect on model and vice-versa. Add test coverage as you see fit.
 
-Thus, this feature includes maintaining the full list of document versions - since it's creation up to it's current state - that should be available for the user to browse - in a way that it should be possible to visualise the diff/differences between any two versions like the image below.
 
-![](http://content.gcflearnfree.org/topics/174/wd10_reviewing_example.png)
+5. **Bonus Question**
+  Implement a ‘model’ for **text edit operation** that encapsulates it's logic in Angular 1.x. An operation can be described as an array of three types of edits: { **move**: <int> } to advance the caret, { **insert**: <string> } to insert the string at caret, and { **delete**: <int> } to delete a number of chars from the caret onwards. Implement the following methods:
+  - Operation.prototype.compose(operation) - Updates the operation by ‘adding’/composing it with another one
+  - Operation.compose(op1, op2) - Static method that returns a new operation composed by the two without changing any of them
+  - Operation.prototype.apply(string) - Applies the described operation on a string
+    Examples of compose:
+  ```
+  [{ move: 1 }, { insert: 'foo' }] + [{ move: 6 }, { insert: 'bar' }] = [{ move: 1 }, { insert: 'foo' }, { move: 5}, { insert: 'bar' } ]
 
-  
-
-Describe, in a general way, how would you approach the implementation of such feature, namely on how documents and versions would be persisted in data. Note that documents are expected to grow significantly in content size. (Again, feel free to include any diagram or image you deem useful to support your explanation.)
-
-## Question 4 - Document Conversion Queuing Service
-
-Implement a small text conversion queueing service (server and a simple single page web interface) using Node.js and AngularJS 1.x.
-
-### Web Interface
-
-The interface is very simple and comprises only of the following screen.
-
-![](https://gist.githubusercontent.com/pedrosanta/ae0c133195fdcdb9663a41bb0cfb253a/raw/d91f7e00776fa576ba3b7ce6d094936dd158cb8f/1-conversions-screen.png)
-
-**What we'll be looking at:** compliance with the requirements below; a solid implementation using AngularJS; adherence to Angular 1.x best practices and code style guides; functionality; code clarity and organisation.
-
-**What we'll value as a plus:** clean and pleasant interpretation of the mockups/UI while keeping functionality; good CSS/style organisation and conventions observance.
-
-### Server/Queuing Service
-
-The server should implement a queuing system for the conversion requests: receive the request from the client/web interface, puts that request on a queue and replies back to the client with information about the queued request. After the request is processed **(optionally, check 4.1)** it can inform the client/web interface of it in some way.
-
-Also, for the sake of demonstration purposes, the processing of each request should consist on a simple timeout, using the [`setTimeout`](https://nodejs.org/api/timers.html#timers_settimeout_callback_delay_args) method, like so:
-
-- **HTML requests:** 10 seconds of timeout;
-- **PDF requests:** 100 seconds of timeout;
-
-Given this, the requests for HTML conversions should have more priority than PDF conversions, meaning that if there is one PDF request followed by a few HTML requests on the queue, the system should make an effort to process the HTML ones first as they are quicker. (The priority and scheduling policy, the number of HTML requests it processes/preempts over PDF, etc, is up to you to define.)
-
-**What we'll be looking at:** compliance with the requirements below; functionality; code clarity, organisation and best practices adherence; artificial timeouts; priority and it's policy.
-
-**What we'll value as a plus:** test coverage; concern with the further scalability of the solution.
-
-### Requirements
-
-To help the prompt assessment of the assignment, the following requirements are to be expected:
-
-* You should provide a Git repo URL (GitHub, Bitbucket or GitLab, public or private, up to you) containing:
-  * A `README.md` at repo root containing all the instructions to run the project and additional information you find necessary;
-  * The install/config/build process shouldn't be much more than running `npm install` and `npm run start`;
-* **Client:**
-  * Implement in Javascript;
-  * Use **AngularJS 1.x**, refrain from using angular-cli (and if you do please trim/remove all unnecessary generated boilerplate code before submiting);
-  * Client dependencies should be managed using [npm](https://www.npmjs.com) or [Bower](https://bower.io);
-  * Resort to [grunt](https://gruntjs.com) (or [gulp](http://gulpjs.com) at most) for building/minification;
-  * If want to use a CSS preprocessor use [Sass](http://sass-lang.com);
-* **Server:**
-  * Implement in Javascript;
-  * The server must be built in **Node.js** (latest LTS) and [Express.js](http://expressjs.com);
-  * If you wish to persist data, use [MongoDB](https://www.mongodb.com) - you can assume we will have a MongoDB instance (latest stable release) running with 'out of the box' default config;
-  * Use **npm** for server package/dependency management, state all dependencies, and avoid assuming globally installed tools/cli/packages;
-  * Your solution should use a queueing system, feel free to use any library to help with the implementation of the queue if you wish;
-  * An artificial timeout should be added to all requests as per above and for demonstration purposes;
-  * The system should implement priority to optimize availability, having HTML requests (quicker) preempt PDF requests (longer), priority and scheduling policy details are up to you to define;
-
-### (Optional Bonus Question 4.1)
-
-Optionally, and as a bonus, implement real time notifications and live status update on the web interface.
-
-![](https://gist.githubusercontent.com/pedrosanta/ae0c133195fdcdb9663a41bb0cfb253a/raw/d91f7e00776fa576ba3b7ce6d094936dd158cb8f/2-conversions-notifications-screen.png)
+  [{ move: 1 }, { insert: 'foo' }] + [{ move: 6 }, { delete: 2 }] = [{ move: 1 }, { insert: 'foo' }, { move: 5}, { delete: 2 } ]
+  ```
+  Add test coverage as you see fit.
