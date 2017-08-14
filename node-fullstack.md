@@ -9,6 +9,7 @@
    - keep the versions list/document history for browsing
    - browse a previous version and
    - visualize the changes/diff between two versions.
+   
    Strive for storage size efficiency.
    
 3. Implement a simple server with a processing queue in latest Node LTS using Express.js that will provide an endpoint to receive requests for conversions for different file types (which you should consider to have different processing time). The request should be async, so the server will put the request into a queue for processing and acknowledge/respond it was accepted immediately. When it finishes should simple log it's completion on the console. The processing of these requests **should not be concurrent** (single worker) and consider the following two file types and their processing time: html with 1 sec and  pdf with 5 secs. Here's an example of an request sequence and the processing order we would expect (note how certain html requests were preempted because they take a fifth of a pdf time, optimizing processed files availability):
