@@ -9,8 +9,7 @@ so far.
 
 #### Question 2
 
-How would you implement a feed generator for a specific user, based on his upvotes and his follow
-ups.
+How would you implement a feed generator for a specific user, based on their upvotes and the books they follow.
 
 The data are represented with these classes:
 
