@@ -73,4 +73,4 @@ Books have many genres.
 
 #### Question 5 (bonus)
 
-Provide a simple recommendation implementation for the question 4.
+Provide a simple implementation recommendation for question 4.
