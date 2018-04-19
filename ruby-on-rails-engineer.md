@@ -9,7 +9,8 @@ so far.
 
 #### Question 2
 
-How would you implement a feed generator for a specific user, based on their upvotes and the authors they follow.
+How would you implement a feed generator for a specific user, based on their upvotes and the authors
+they follow.
 
 The data are represented with these classes:
 
@@ -34,8 +35,7 @@ Follow
   - author
 ```
 
-You need to implement the retrieve method, which should get a list of books title on the right
-order.
+You need to implement the retrieve method, which should get a list of books on the right order.
 
 ```ruby
 class Feed
@@ -61,16 +61,10 @@ Provide only the design without any concrete methods implementation.
 
 #### Question 4
 
-With the previous data schema from question 2, how would you build a recommendation system.
-What kind of tools, algorithm
-
-```
-Genre
-  - name
-```
-
-Books have many genres.
+With the previous data schema (question 2), with a list of genres for each books, how would you
+build a recommendation system.
+What kind of dependencies, tools or algorithms you would like to use?
 
 #### Question 5 (bonus)
 
-Provide a simple implementation recommendation for question 4.
+Provide a simple implementation for recommendations in question 4.
