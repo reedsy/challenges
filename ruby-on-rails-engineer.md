@@ -50,7 +50,8 @@ end
 ```
 
 You don't necessarily need a database, or a framework to build this feed generator, you can provide
-an example with plain ruby objects.
+an example with plain ruby objects. You can use a tool like [Faker](https://github.com/stympy/faker)
+to build objects.
 [bonus] The feed could have a refresh method to retrieve the new books.
 
 #### Question 3
