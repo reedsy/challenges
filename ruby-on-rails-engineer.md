@@ -5,7 +5,7 @@ https://angel.co/reedsy/jobs/64263-ruby-on-rails-engineer
 #### Question 1
 
 Write a paragraph about yourself, your hobbies and your major achievements in your career or study
-so far.
+so far. Add another one about your professional experience and commercial projects you've been involved with.
 
 #### Question 2
 
