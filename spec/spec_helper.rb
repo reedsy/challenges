@@ -1,4 +1,5 @@
 require 'shoulda-matchers'
+require 'database_cleaner'
 require_relative '../boot.rb'
 
 RSpec.configure do |config|
@@ -11,6 +12,11 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
 end
 
 Shoulda::Matchers.configure do |config|
