@@ -5,12 +5,15 @@ ENV REFRESHED_AT 2018-01-19
 # Install packages
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
+    git \
     ruby-dev \
     libgdbm-dev \
     libncurses5-dev \
     libffi-dev \
     libyaml-dev \
     libreadline-dev \
+    sqlite3 \
+    libsqlite3-dev \
     curl \
     && rm -rf /var/lib/apt/lists/*
 

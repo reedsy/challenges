@@ -1,5 +1,6 @@
 build:
 	docker-compose build
+	docker-compose run ruby bundle install
 guard:
 	docker-compose run ruby guard
 rspec:
