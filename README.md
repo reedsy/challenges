@@ -7,7 +7,12 @@
 
 ## Setup
 
-* `make` will build the application ready for use
+* `make` will build the application ready for use.
+
+## Question 1
+
+About Me - `ruby-q1/about-me.md`  
+CV - `ruby-q1/cv.md`
 
 # Reedsy Engineer Challenge
 
