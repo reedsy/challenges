@@ -9,10 +9,19 @@
 
 * `make` will build the application ready for use.
 
+## Code Linting
+
+* `make guard` this keeps an eye on code styles
+
 ## Question 1
 
 About Me - `ruby-q1/about-me.md`  
 CV - `ruby-q1/cv.md`
+
+## Question 2
+
+* Run the code for Q2 - `make q2_run`
+* Run the specs for Q2 - `make q2_specs`
 
 # Reedsy Engineer Challenge
 
