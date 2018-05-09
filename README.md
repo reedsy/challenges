@@ -11,7 +11,11 @@
 
 ## Code Linting
 
-* `make guard` this keeps an eye on code styles
+* `make guard` this keeps an eye on code styles.
+
+## Code Testng
+
+* `make rspec` this runs rspec.
 
 ## Question 1
 
