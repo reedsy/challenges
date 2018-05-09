@@ -25,7 +25,6 @@ CV - `ruby-q1/cv.md`
 ## Question 2
 
 * Run the code for Q2 - `make q2_run`
-* Run the specs for Q2 - `make q2_specs`
 
 # Reedsy Engineer Challenge
 
