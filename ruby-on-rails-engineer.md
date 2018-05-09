@@ -35,7 +35,7 @@ Follow
   - author
 ```
 
-You need to implement the retrieve method, which should get a list of books on the right order.
+You need to implement the retrieve method, which should get a list of books in the right order.
 
 ```ruby
 class Feed
