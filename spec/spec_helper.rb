@@ -1,6 +1,7 @@
 require 'shoulda-matchers'
 require 'database_cleaner'
 require_relative '../boot.rb'
+require_relative './data/fabricator'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -16,6 +17,8 @@ RSpec.configure do |config|
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
+    DatabaseCleaner.clean
+    Fabricator.create!
   end
 end
 

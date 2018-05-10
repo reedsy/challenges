@@ -15,6 +15,7 @@ end
 
 group :test do
   gem 'database_cleaner'
+  gem 'fabrication'
   gem 'rspec'
   gem 'shoulda-matchers', '~> 3.1'
 end
