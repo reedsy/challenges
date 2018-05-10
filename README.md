@@ -32,7 +32,10 @@
 
 ## Question 2
 
-* Run the code for Q2 - `make q2`
+* [Feed](ruby-q2/feed.rb)
+* [Feed Specs](spec/ruby-q2/feed_spec.rb)
+
+By running `make rspec` the code for ruby-q2 is run using the fabricated data within the [spec data directory](spec/data/).
 
 # Reedsy Engineer Challenge
 

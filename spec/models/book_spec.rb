@@ -4,4 +4,6 @@ RSpec.describe Book, type: :model do
   it { should have_db_column(:author_id) }
 
   it { should belong_to(:author) }
+  it { should have_many(:upvotes) }
+  it { should have_many(:follows).through(:author) }
 end

@@ -9,6 +9,3 @@ lint:
 	docker-compose run ruby rubocop
 bash:
 	docker-compose run ruby bash
-q2:
-	docker-compose run ruby -e 'puts "here"'
-
