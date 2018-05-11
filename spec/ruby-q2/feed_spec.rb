@@ -24,4 +24,12 @@ describe '#feed' do
       expect(feed.retrieve.map(&:title)).to eq(titles)
     end
   end
+
+  describe '#refresh' do
+    it 'has the following titles in order' do
+      user.vote!(Fabricate.uniq!(:arm))
+      titles = ['Armada', 'Orbs', 'The Speed of Sound', 'The Sound of Echoes']
+      expect(feed.refresh.map(&:title)).to eq(titles)
+    end
+  end
 end
