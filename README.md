@@ -37,6 +37,9 @@
 
 By running `make rspec` the code for ruby-q2 is run using the fabricated data within the [spec data directory](spec/data/).
 
-# Reedsy Engineer Challenge
+## Question 3
 
-* [Ruby on Rails Engineer](information/ruby-on-rails-engineer.md)
+* [Payments](ruby-q3/)
+* [Payments Specs](spec/ruby-q3/)
+
+By running `make rspec` the code for ruby-q3 is run. 
