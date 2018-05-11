@@ -25,6 +25,10 @@
 
 * `make bash`
 
+## Code Test Questions
+
+[Questions](information/ruby-on-rails-engineer.md)
+
 ## Question 1
 
 * [About Me](ruby-q1/about-me.md)
@@ -43,3 +47,18 @@ By running `make rspec` the code for ruby-q2 is run using the fabricated data wi
 * [Payments Specs](spec/ruby-q3/)
 
 By running `make rspec` the code for ruby-q3 is run. 
+
+
+## Question 4
+
+* [Recommendations System - Doc](ruby-q4/recommendations.md)
+
+
+## Question 5
+
+* [Recommendations](ruby-q5/)
+* [Recommendations Specs](spec/ruby-q5/)
+
+By running `make rspec` the code for ruby-q5 is run. 
+
+**Note: If you get a Faraday error just run `make rspec` again. It's just neo4j warming up for the first time**

@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'activerecord'
 gem 'mini_record', github: 'dan-watson/mini_record', branch: 'master'
+gem 'neo4j'
 gem 'sqlite3'
 
 group :development do
@@ -16,6 +17,7 @@ end
 group :test do
   gem 'database_cleaner'
   gem 'fabrication'
+  gem 'rake'
   gem 'rspec'
   gem 'shoulda-matchers', '~> 3.1'
 end
