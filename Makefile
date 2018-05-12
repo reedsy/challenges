@@ -6,7 +6,7 @@ neo4j:
 guard:
 	docker-compose run ruby guard
 rspec:
-	docker-compose run ruby rspec
+	docker-compose up
 lint:
 	docker-compose run ruby rubocop
 bash:

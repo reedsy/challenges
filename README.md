@@ -9,10 +9,6 @@
 
 * `make` will build the application ready for use.
 
-## Guard
-
-* `make guard` run both linting and testing whilst watching files
-
 ## Code Linting
 
 * `make lint` this runs code linting
@@ -20,6 +16,10 @@
 ## Code Testing - Run all the specs
 
 * `make rspec` this runs rspec.
+
+## Guard
+
+* `make guard` run both linting and testing whilst watching files
 
 ## Bash Terminal Inside Docker Instance
 
@@ -60,5 +60,3 @@ By running `make rspec` the code for ruby-q3 is run.
 * [Recommendations Specs](spec/ruby-q5/)
 
 By running `make rspec` the code for ruby-q5 is run. 
-
-**Note: If you get a Faraday error just run `make rspec` again. It's just neo4j warming up for the first time**
