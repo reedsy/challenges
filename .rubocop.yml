@@ -1,0 +1,14 @@
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+      - 'Guardfile'
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Metrics/ModuleLength:
+  Exclude:
+    - "**/*_spec.rb"
+Metrics/BlockLength:
+  Exclude:
+    - "**/*_spec.rb"
