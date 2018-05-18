@@ -7,7 +7,7 @@
 Tell us about one of your commercial projects with Node.js and/or AngularJS.
 
 
-## 2.
+## 2. Documents versioning
 
 Detail how would you persist in data/present a schema to store several versioned text-based documents.
 
