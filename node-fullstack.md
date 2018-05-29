@@ -1,39 +1,60 @@
 # Node.js Fullstack Engineer Challenge
 
-**Notes:** You can send this assignment as a single repo/folder with markdown and code. **For questions 3-5 use the latest Node LTS**.
+You can submit all the answers to this assignment in a single repository (or as a zipped folder), containing markdown and code.
+
+**For questions 3-5 use the latest Node LTS**.
 
 ## 1. About you
 
 Tell us about one of your commercial projects with Node.js and/or AngularJS.
 
 
-## 2. Documents versioning
+## 2. Document versioning
 
-Detail how would you persist in data/present a schema to store several versioned text-based documents.
+Detail how you would store several versioned, text-based documents, and present a schema for your solution.
 
-It should allow to:
-   - save a version representing a document state
-   - keep the versions list/document history for browsing
-   - browse a previous version and
-   - visualize the changes/diff between two versions.
+It should be able to show:
+   - the document in its current state
+   - the document at any point in its history
+   - the changes made between two versions
 
-   Strive for storage size efficiency.
+Strive for disk space efficiency.
 
 
-## 3. REST API
+## 3. Node.js REST API
 
-Implement a REST API using Express.js that handles Export and Import requests. **Usage of TypeScript is highly valued**.
+Implement a REST API using Express.js that handles Export and Import requests. The solution should ideally be written in Typescript, or else using plain JavaScript's `class` structure.
 
-The API should expose the endpoints for:
-- **Posting** a request for a **new Export job**. The request must contain "bookId" and "type" ("epub" or "pdf"). The valid requests should be saved in memory.
-- **Getting** a list of **export requests**, grouped by their current state.
-- **Posting** a request for a new **Import job**. The request must contain "bookId", "type" ("word", "pdf", "wattpad" or "evernote") and "url" (for simplification purposes, all types should use a simple URL). The valid requests should be saved in memory.
-- **Getting** a list of **import requests**, grouped by their current state.
+The API should expose endpoints to:
+- `POST` a request for a **new Export job**. Valid requests should be saved in memory. Invalid requests should return an error. The request must have the following schema:
 
-Both export and import requests should be saved on a "pending" state and have a "created_on" timestamp. The state should be updated after a specified time (below) from "pending" to "finished" and add/update a "updated_on" timestamp.
-- ePUB Export request: 10 seconds
-- PDF Export request: 25 seconds
-- Import requests (of all types): 60 seconds
+  ```javascript
+  {
+    bookId: string,
+    type: "epub" | "pdf"
+  }
+  ```
+
+- `GET` a list of **Export requests**, grouped by their current `state` (see below).
+- `POST` a request for a new **Import job**. Valid requests should be saved in memory. Invalid requests should return an error. The request must have the following schema:
+
+  ```javascript
+  {
+    bookId: string,
+    type: "word" | "pdf" | "wattpad" | "evernote",
+    url: string
+  }
+  ```
+
+- `GET` a list of **Import requests**, grouped by their current `state` (see below).
+
+Both export and import requests should be created with a `pending` state, and with a `created_at` timestamp. An import or export should take the amount of time outlined below. After the specified time, the state should be updated from `pending` to `finished` and update an `updated_at` timestamp.
+
+| Job type     | Processing time (s) |
+| ------------ | ------------------- |
+| ePub export  | 10                  |
+| PDF export   | 25                  |
+| import (any) | 60                  |
 
 Add test coverage as you see fit.
 
@@ -61,22 +82,31 @@ The project should be responsible for managing all the required dependencies and
 
 ## 5. Bonus Question
 
-Implement a **text edit operation** module that handles basic operations. An operation can be described as an array of three types of edits:
+When multiple users are collaborating on a document, collisions in their edits inevitably occur. Implement a module that can handle basic text update operations, and combine two colliding edits into a single operation.
 
-- { **move**: \<int> } to advance the caret;
-- { **insert**: \<string> } to insert the string at caret;
-- { **delete**: \<int> } to delete a number of chars from the caret onwards.
+An operation is described as an array of any combination of three types of edits:
+
+- `{ move: number }` to advance the caret
+- `{ insert: string }` to insert the string at caret
+- `{ delete: number }` to delete a number of chars from the caret onwards
 
 Implement the following methods:
-- Operation.prototype.compose(operation) - Updates the operation by ‘adding’/composing it with another one
-- Operation.compose(op1, op2) - Static method that returns a new operation composed by the two without changing any of them
-- Operation.prototype.apply(string) - Applies the described operation on a string
+- `Operation.prototype.combine(operation)` Updates the operation by combining it with another colliding operation
+- `Operation.combine(op1, op2)` Static method that returns a new operation by combining the arguments without mutating them
+- `Operation.prototype.apply(string)` Applies the operation to the provided argument
 
-Examples of compose:
-```
-[{ move: 1 }, { insert: 'foo' }] + [{ move: 6 }, { insert: 'bar' }] = [{ move: 1 }, { insert: 'foo' }, { move: 5}, { insert: 'bar' } ]
+For example:
 
-[{ move: 1 }, { insert: 'foo' }] + [{ move: 6 }, { delete: 2 }] = [{ move: 1 }, { insert: 'foo' }, { move: 5}, { delete: 2 } ]
+```javascript
+const s = "abcdefg";
+const op1 = new Operation([{ move: 1 }, { insert: "FOO" }]);
+const op2 = new Operation([{ move: 3 }, { insert: "BAR" }]);
+
+op1.apply(s); // => "aFOObcdefg"
+op2.apply(s); // => "abcBARdefg"
+
+op1.combine(op2); // => [{ move: 1 }, { insert: 'FOO' }, { move: 2}, { insert: 'BAR' } ]
+op1.apply(s); // => "aFOObcBARdefg"
 ```
 
 Add test coverage to demonstrate the module functionality.
