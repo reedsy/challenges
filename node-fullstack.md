@@ -105,10 +105,13 @@ const op2 = new Operation([{ move: 3 }, { insert: "BAR" }]);
 op1.apply(s); // => "aFOObcdefg"
 op2.apply(s); // => "abcBARdefg"
 
-op1.combine(op2); // => [{ move: 1 }, { insert: 'FOO' }, { move: 2}, { insert: 'BAR' } ]
-op1.apply(s); // => "aFOObcBARdefg"
+const combined1 = Operation.combine(op1, op2); // => [{ move: 1 }, { insert: 'FOO' }, { move: 2}, { insert: 'BAR' } ]
+combined1.apply(s); // => "aFOObcBARdefg"
+
+const combined2 = Operation.combine(op2, op1);
+expect(combined2.apply(s)).to.equal(combined1.apply(s));
 ```
 
-Add test coverage to demonstrate the module functionality.
+Add test coverage to demonstrate the module functionality. Again, TypeScript is preferred in this solution.
 
 The project should be responsible for managing all the required dependencies and should run just by using `npm install` and `npm test`.
