@@ -42,7 +42,7 @@ are you going to use to automate this process and visualise your own statistics?
 
 ## Question 6
 
-Implement simple API to store and process events described in Question #2.
+Implement simple API to store and process events described in Question #3.
 Keep in mind that it has to be fast and there might be multiple actions
 required to process each event (like reconciliation of past events,
 notifications or recalculation of statistics).
