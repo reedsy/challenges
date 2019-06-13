@@ -2,10 +2,14 @@
 
 ## Question 1
 
+Why do you find Reedsy interesting? (apart from our tech stack)
+
+## Question 2
+
 Describe a commercial project in which you set up and analysed tracking data.
 What actions came out of this work?
 
-## Question 2
+## Question 3
 
 Imagine a project with three basic components:
 * Public app with client-facing landing pages
@@ -24,19 +28,19 @@ from time before events collection started?
 
 What tools and solutions would you use?
 
-## Question 3
+## Question 4
 
 There are not only multiple apps but also many devices users can have and
 access these. How would you solve the problem of assigning a proper user
 to anonymous events sent before user was known. What we can do if user
 keeps using other devices without authentication?
 
-## Question 4
+## Question 5
 
 There's number of reports with tables and charts to be done each week. What tools
 are you going to use to automate this process and visualise your own statistics?
 
-## Question 5
+## Question 6
 
 Implement simple API to store and process events described in Question #2.
 Keep in mind that it has to be fast and there might be multiple actions
