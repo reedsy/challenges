@@ -56,28 +56,34 @@ Both export and import requests should be created with a `pending` state, and wi
 | PDF export   | 25                  |
 | import (any) | 60                  |
 
-Add test coverage as you see fit.
+**Add test coverage as you see fit.**
 
-The project should be responsible for managing all the required dependencies and should run just by using `npm install` and `npm start`.
+The project should be responsible for managing all the required dependencies and should run just by using:
+- `yarn install` + `yarn start`
+or
+- `npm install` + `npm start`.
 
 
 ## 4. AngularJS
 
-Using AngularJS (1.x), create a basic SPA that implements the following UI.
+Using **Vue.js or AngularJS (1.x)**, create a basic SPA that implements the following UI:
 
 ![AngularJS 1](./images/node_4-01.png "AngularJS 1")
 
 ![AngularJS 2](./images/node_4-02.png "AngularJS 2")
 
-- Each page should display 5 books.
-- A few pages should be available in order for pagination to work.
-- Book entries should be clickable and expand/collapse to show/hide more information about the selected book.
-- Book stores should only be displayed when the respective URL is available; make different entries as represented on the images so different store availability scenarios are represented.
+- Each page should display 5 books;
+- A few pages should be available in order for pagination to work;
+- Book entries should be clickable and expand/collapse to show/hide more information about the selected book;
+- Book store links should only be displayed when the respective URL is available; make different entries as represented on the images above so different store availability scenarios are represented;
 - Improve the UI as you think works best.
 
-Add test coverage as you see fit.
+**Add test coverage as you see fit.**
 
-The project should be responsible for managing all the required dependencies and should run just by using `npm install` and `npm start`.
+The project should be responsible for managing all the required dependencies and should run just by using:
+-  `yarn install` + `yarn start`
+or
+- `npm install` + `npm start`.
 
 
 ## 5. Bonus Question
@@ -112,6 +118,9 @@ const combined2 = Operation.combine(op2, op1);
 expect(combined2.apply(s)).to.equal(combined1.apply(s));
 ```
 
-Add test coverage to demonstrate the module functionality. Again, TypeScript is preferred in this solution.
+**Add test coverage to demonstrate the module functionality.** Again, TypeScript is preferred in this solution.
 
-The project should be responsible for managing all the required dependencies and should run just by using `npm install` and `npm test`.
+The project should be responsible for managing all the required dependencies and should run just by using:
+- `yarn install` + `yarn test`
+or
+- `npm install` + `npm test`.
