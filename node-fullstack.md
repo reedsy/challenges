@@ -115,6 +115,8 @@ const combined1 = Operation.combine(op1, op2); // => [{ move: 1 }, { insert: 'FO
 combined1.apply(s); // => "aFOObcBARdefg"
 
 const combined2 = Operation.combine(op2, op1);
+// NB: This expectation is true for this specific case, but not in the general case.
+// Can you think of an example where this assertion might not be true?
 expect(combined2.apply(s)).to.equal(combined1.apply(s));
 ```
 
