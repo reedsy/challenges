@@ -42,8 +42,10 @@ are you going to use to automate this process and visualise your own statistics?
 
 ## Question 6
 
-Implement simple API to store and process events described in Question #3.
-Keep in mind that it has to be fast and there might be multiple actions
-required to process each event (like reconciliation of past events,
-notifications or recalculation of statistics).
-As data source use CSV files which can be found in `data` folder.
+Implement a simple HTTP JSON API to receive, store and aggregate product events.
+
+Take search events as an example - user searches for keywords and we want to store each search as an event.
+Implement at least one type of aggregation - for instance, an event counter grouped by day, month and year.
+Ex: how many daily/monthly/yearly searches for a given user.
+
+You are responsible for designing the API, including the event payload format.
