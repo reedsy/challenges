@@ -42,7 +42,7 @@ are you going to use to automate this process and visualise your own statistics?
 
 ## Question 6
 
-Implement a simple HTTP JSON API to receive, store and aggregate product events.
+Implement a simple HTTP JSON API to receive, store and aggregate product events (think Q3 events).
 
 Take search events as an example - user searches for keywords and we want to store each search as an event.
 Implement at least one type of aggregation - for instance, an event counter grouped by day, month and year.
