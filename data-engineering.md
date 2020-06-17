@@ -36,7 +36,7 @@ _Describe the different components of the architecture, tools involved and compa
 ## Part B
 
 The marketing Team at Bookly introduced A/B Testing on their blog - each blog post will show a given registration popup from a set of pre-configured popups.
-The raw dataset in dataset.tsv offers a table with various content properties and the conversion rates for each combination of blog post and registration popup.
+The raw dataset in [dataset.tsv](data/dataset.tsv) offers a table with various content properties and the conversion rates for each combination of blog post and registration popup.
 
 ### Question 4
 
