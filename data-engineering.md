@@ -1,5 +1,7 @@
 # Data Engineering Assignment
 
+Describe your thought process with detail and clarity. Even if you don't get to a solution/conclusion on any of the following questions, make sure that you provide a detailed explanation.
+
 ### Question 1
 
 Write a paragraph about yourself, your hobbies and your major achievements in your career or study so far. Add another one about your professional experience and commercial projects you've been involved with.
@@ -8,15 +10,19 @@ Write a paragraph about yourself, your hobbies and your major achievements in yo
 
 Consider Bookly, an internet company that owns a marketplace for selling books, a blog and other complementary online products with an overlapping user base. Each product is backed by its own independent Ruby web server and relational SQL database.
 
+Bookly has approx 100k books and 1M users.
+
 ### Question 2
 
-The Marketing Team at Bookly wants to merge and analyze all the data that is being collected by the different products. Examples of such analytics include:
+The Marketing Team at Bookly wants to merge and analyze all the data that is being collected by the different products in order to extract useful business insights of various kinds.
+Examples of such analytics include (but are not restricted to):
 
-- List all-time top rated books and trending ones; 
+- List all-time top rated books and trending ones;
 - Measure user sign-up rate over certain periods (weekly, quarterly, etc);
-- Show the total number of real-time page views for any given book page;
+- Show the total number of real-time (current) page views for any given book description page (product page);
+- ...
 
-Design a conceptual data pipeline to drive and aggregate data from all the different sources to ultimately be accessible by a user-friendly data exploration/dashboarding tool of your choice.
+Design a conceptual data pipeline to drive and aggregate data from all the different sources to ultimately be accessible by a user-friendly data exploration/dashboarding tool of your choice. Feel free to pick any technology available (e.g. open source, cloud providers, etc.).
 
 _Describe the different components of the architecture, tools involved and compare possible approaches._
 
