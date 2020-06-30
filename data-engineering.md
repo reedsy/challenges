@@ -10,7 +10,7 @@ approach out data, both from the engineering and analytical perspectives. For
 this reason, we will assess and value your data analytics skills in addition to
 those required for classic Data Engineering roles.
 
-*Describe your thought process with detail and clarity.* Even if you don't get to a solution/conclusion on any of the following questions, make sure that you provide a detailed explanation.
+*Describe your thought process with detail and clarity.* Even if you don't get to a solution/conclusion on any of the following questions, make sure that you provide a detailed explanation to help us understand your approach and assumptions.
 
 ### Question 1
 
