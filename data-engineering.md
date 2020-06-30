@@ -1,6 +1,16 @@
 # Data Engineering Assignment
 
-Describe your thought process with detail and clarity. Even if you don't get to a solution/conclusion on any of the following questions, make sure that you provide a detailed explanation.
+As a Data Engineer at Reedsy, you will be responsible for managing our data platform,
+including the design of a pipeline to extract data from various sources through various processes,
+apply appropriate transformations, and output results into visualization tools and decision
+support systems.
+
+We are looking for data-aware candidates that can help us with creating novel ways to
+approach out data, both from the engineering and analytical perspectives. For
+this reason, we will assess and value your data analytics skills in addition to
+those required for classic Data Engineering roles.
+
+*Describe your thought process with detail and clarity.* Even if you don't get to a solution/conclusion on any of the following questions, make sure that you provide a detailed explanation to help us understand your approach and assumptions.
 
 ### Question 1
 
