@@ -51,17 +51,22 @@ _Describe the different components of the architecture, tools involved and compa
 
 ## Part B
 
-The marketing Team at Bookly introduced A/B Testing on their blog - each blog post will show a given registration popup from a set of pre-configured popups.
-The raw dataset in [dataset.tsv](data/dataset.tsv) offers a table with various content properties and the conversion rates for each combination of blog post and registration popup.
+The marketing Team at Bookly introduced A/B Testing on their blog - each blog post displays a registration popup picked up from a collection of pre-configured popups. Popups can differ in certain properties such as title, description and picture.
+The raw dataset in [dataset.tsv](data/dataset.tsv) offers a table with each combination of blog post and registration popup, their corresponding properties and statistics like the total number of page views and registrations. *Bookly's main goal is to convert page views into registrations*.
+
+- each A/B experiment has a start date;
+- rows with empty _popup_version_ values are not running A/B experiments;
+- some rows can have duplicates;
 
 ### Question 4
 
-What is the major contributor to user registrations? In other words, what is the most relevant factor that contributes the most to convert user views into user registrations?
+a) For each A/B experiment, find the most performant popup version (A or B) and show the corresponding converstion rate.
+b) Explore the dataset. What other insights can be extracted?
 
 _Describe in detail all the steps you take to perform the analysis, provide code snippets, relevant data transformations and results._
 
-### Question 5
+### Question 5 (optional)
 
-Explore the dataset. What other insights can be extracted?
+Is it possible to find out what is the property(s) that contributes the most to conversion? Describe how you would approach this problem.
 
 _Describe in detail all the steps you take to perform the analysis, provide code snippets, relevant data transformations and results._
