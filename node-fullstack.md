@@ -1,12 +1,12 @@
 # Node.js Fullstack Engineer Challenge
 
-You can submit all the answers to this assignment in a single repository (or as a zipped folder), containing markdown and code.
+You can submit all the answers to this assignment in a **private**, single repository or as a zipped folder, containing markdown and code. If you use GitHub, please share your answers with **reedsyapplications**.
 
 **For questions 3-5 use the latest Node LTS**.
 
 ## 1. About you
 
-Tell us about one of your commercial projects with Node.js and/or AngularJS.
+Tell us about one of your commercial projects with Node.js and/or Vue.js.
 
 
 ## 2. Document versioning
@@ -64,13 +64,13 @@ or
 - `npm install` + `npm start`.
 
 
-## 4. AngularJS
+## 4. SPA
 
-Using **Vue.js or AngularJS (1.x)**, create a basic SPA that implements the following UI:
+Using **Vue.js**, create a basic SPA that implements the following UI:
 
-![AngularJS 1](./images/node_4-01.png "AngularJS 1")
+![SPA 1](./images/node_4-01.png "SPA 1")
 
-![AngularJS 2](./images/node_4-02.png "AngularJS 2")
+![SPA 2](./images/node_4-02.png "SPA 2")
 
 - Each page should display 5 books;
 - A few pages should be available in order for pagination to work;
