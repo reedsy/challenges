@@ -1,6 +1,8 @@
 # Front end Engineer Challenge
 
-You can submit all the answers to this assignment in a single repository (or as a zipped folder), containing markdown and code.
+Submit all the answers by creating a **private** GitHub repository and sharing it with **reedsyapplications**. Alternatively, you can submit a zipped folder with all the answers.
+Your submission should include markdown and code and each answer should be in it's own folder.
+
 
 ## 1. About you
 
@@ -30,13 +32,14 @@ Given the HTML file **front-end/q3/q3.html**, implement the styling so the page 
 - Implement styling rules that consider different screen sizes.
 
 **Notes:**
-- The footer should stick to the bottom when scrolling.
-- You can, and should, use a CSS pre-processor, such as SASS or LESS.
+- The footer should stick to the bottom when scrolling;
+- You can, and should, use a CSS pre-processor, such as SASS or LESS;
+- Avoid changing the template, your answer should only style the given HTML.
 
 
 ## 4. SPA
 
-Using Vue.js or AngularJS, implement an SPA that gets information from a server (explained below) and has the following pages:
+Using Vue.js, implement an SPA that gets information from a server (explained below) and has the following pages:
 
 
 ### Books list
@@ -60,6 +63,7 @@ For this question, you **don't** have to replicate the example screens above, fe
 
 
 **Important notes:**
+- Do not change or submit the server code, your answer should focus on the client application only;
 - Add test coverage as you see fit;
 - You may use TypeScript instead of plain JS;
 - Use a CSS pre-processor;
