@@ -3,6 +3,8 @@
 Submit all the answers by creating a **private** GitHub repository and sharing it with **reedsyapplications**. Alternatively, you can submit a zipped folder with all the answers.
 Your submission should include markdown and code and each answer should be in it's own folder.
 
+The estimated time to accomplish every task sits between 10 and 15 hours, depending on your experience.
+
 
 ## 1. About you
 
