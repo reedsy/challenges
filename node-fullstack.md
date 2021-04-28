@@ -2,6 +2,8 @@
 
 You can submit all the answers to this assignment in a **private**, single repository or as a zipped folder, containing markdown and code. If you use GitHub, please share your answers with **reedsyapplications**.
 
+Answering all the questions to a Production-level standard should take approximately 1 or 2 work days.
+
 **For questions 3-5 use the latest Node LTS**.
 
 ## 1. About you
