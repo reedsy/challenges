@@ -13,14 +13,14 @@ Tell us about one of your commercial projects with Node.js and/or Vue.js.
 
 ## 2. Document versioning
 
-Detail how you would store several versioned, text-based documents, and present a schema for your solution.
+Detail how you would store several versioned, text-based documents
 
 It should be able to show:
    - the document in its current state
    - the document at any point in its history
    - the changes made between two versions
 
-Strive for disk space efficiency.
+Strive for disk space efficiency, but discuss any trade-offs you've made and potential mitigations
 
 
 ## 3. Node.js REST API
@@ -88,7 +88,7 @@ or
 - `npm install` + `npm start`.
 
 
-## 5. Bonus Question
+## 5. Operation collision
 
 When multiple users are collaborating on a document, collisions in their edits inevitably occur. Implement a module that can handle basic text update operations, and combine two colliding edits into a single operation.
 
