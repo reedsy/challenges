@@ -26,7 +26,7 @@ Some important notes before diving into the specifics.
 - we are not expecting your application to have a UI: assume that your work would be used to provide that at a later stage;
 - while using a Ruby web framework of your choice might be helpful, keep in mind that if you'd like to stick to "vanilla" Ruby that's ok too;
 - any detail that is not specified throughout this assignment is for you to decide. Our questions and examples are agnostic on purpose, so as to not bias your toward a specific format. If you work at Reedsy you will make decisions and we want that to reflect here. This being said, if you spot anything that you **really** think should be detailed here, feel free to let us know;
-- keep in mind that there are plans to expand this store in the future so make sure you write code you would be happy working on — and deploying — in the future;
+- make sure you write code you would be happy working on — and deploying — in the future;
 
 ### Question 1
 
