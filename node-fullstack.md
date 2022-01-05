@@ -13,19 +13,20 @@ Tell us about one of your commercial projects with Node.js and/or Vue.js.
 
 ## 2. Document versioning
 
-Detail how you would store several versioned, text-based documents
+Detail how you would store several versioned novels.
 
-It should be able to show:
-   - the document in its current state
-   - the document at any point in its history
-   - the changes made between two versions
+Your approach should:
 
-Strive for disk space efficiency, but discuss any trade-offs you've made and potential mitigations
-
+- [ ] show the novel in its current state
+- [ ] show the novel at any point in its history
+- [ ] show the changes made between two versions
+- [ ] prioritize disk space efficiency
+- [ ] discuss any trade-offs made, as well as potential mitigations
+- [ ] consider any potential domain-specific issues
 
 ## 3. Node.js REST API
 
-Implement a REST API using Express.js that handles Export and Import requests. The solution should ideally be written in Typescript, or else using plain JavaScript's `class` structure.
+Implement a REST API using Express.js that handles Export and Import requests.
 
 The API should expose endpoints to:
 - `POST` a request for a **new Export job**. Valid requests should be saved in memory. Invalid requests should return an error. The request must have the following schema:
@@ -58,13 +59,12 @@ Both export and import requests should be created with a `pending` state, and wi
 | PDF export   | 25                  |
 | import (any) | 60                  |
 
-**Add test coverage as you see fit.**
+Your solution should:
 
-The project should be responsible for managing all the required dependencies and should run just by using:
-- `yarn install` + `yarn start`
-or
-- `npm install` + `npm start`.
-
+- [ ] use TypeScript or modern ES features
+- [ ] have reasonable test coverage
+- [ ] be scalable — this is a small app, but write it as if it will grow into a full, Production-grade server
+- [ ] be data store agnostic
 
 ## 4. SPA
 
@@ -74,19 +74,16 @@ Using **Vue.js**, create a basic SPA that implements the following UI:
 
 ![SPA 2](./images/node_4-02.png "SPA 2")
 
-- Each page should display 5 books;
-- A few pages should be available in order for pagination to work;
-- Book entries should be clickable and expand/collapse to show/hide more information about the selected book;
-- Book store links should only be displayed when the respective URL is available; make different entries as represented on the images above so different store availability scenarios are represented;
-- Improve the UI as you think works best.
+Your solution should:
 
-**Add test coverage as you see fit.**
-
-The project should be responsible for managing all the required dependencies and should run just by using:
--  `yarn install` + `yarn start`
-or
-- `npm install` + `npm start`.
-
+- [ ] use Vue.js
+- [ ] display 5 books per page
+- [ ] have multiple pages to have pagination
+- [ ] expand/collapse details when clicking the book
+- [ ] improve the UI as you see fit
+- [ ] have reasonable test coverage
+- [ ] be scalable — this is a small app, but write it as if it will grow into a full, Production-grade SPA
+- [ ] assume books will be fetched over HTTP
 
 ## 5. Operation collision
 
@@ -94,9 +91,9 @@ When multiple users are collaborating on a document, collisions in their edits i
 
 An operation is described as an array of any combination of three types of edits:
 
-- `{ move: number }` to advance the caret
-- `{ insert: string }` to insert the string at caret
-- `{ delete: number }` to delete a number of chars from the caret onwards
+- `{ skip: number }` to skip characters
+- `{ insert: string }` to insert the given string
+- `{ delete: number }` to delete a number of characters
 
 Implement the following methods:
 - `Operation.prototype.combine(operation)` Updates the operation by combining it with another colliding operation
@@ -107,13 +104,13 @@ For example:
 
 ```javascript
 const s = "abcdefg";
-const op1 = new Operation([{ move: 1 }, { insert: "FOO" }]);
-const op2 = new Operation([{ move: 3 }, { insert: "BAR" }]);
+const op1 = new Operation([{ skip: 1 }, { insert: "FOO" }]);
+const op2 = new Operation([{ skip: 3 }, { insert: "BAR" }]);
 
 op1.apply(s); // => "aFOObcdefg"
 op2.apply(s); // => "abcBARdefg"
 
-const combined1 = Operation.combine(op1, op2); // => [{ move: 1 }, { insert: 'FOO' }, { move: 2}, { insert: 'BAR' } ]
+const combined1 = Operation.combine(op1, op2); // => [{ skip: 1 }, { insert: 'FOO' }, { skip: 2}, { insert: 'BAR' } ]
 combined1.apply(s); // => "aFOObcBARdefg"
 
 const combined2 = Operation.combine(op2, op1);
@@ -122,9 +119,8 @@ const combined2 = Operation.combine(op2, op1);
 expect(combined2.apply(s)).to.equal(combined1.apply(s));
 ```
 
-**Add test coverage to demonstrate the module functionality.** Again, TypeScript is preferred in this solution.
+Your solution should:
 
-The project should be responsible for managing all the required dependencies and should run just by using:
-- `yarn install` + `yarn test`
-or
-- `npm install` + `npm test`.
+- [ ] use TypeScript or modern ES features
+- [ ] have reasonable test coverage
+- [ ] explain any assumptions made
