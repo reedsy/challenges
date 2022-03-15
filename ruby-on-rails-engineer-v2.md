@@ -29,7 +29,7 @@ Some important notes before diving into the specifics.
 - there are no restrictions on what dependecies you can use, but try keep them to a minimum;
 - include also with your solution:
   - instructions on how to setup and run your application;
-  - a description of the API endpoints.
+  - a description of the API endpoints with cURL examples
 
 ### Question 1
 
@@ -45,22 +45,22 @@ Implement an API endpoint that allows one to check the price of a given list of 
 
 Some examples on the values expected:
 ```
-Items: MUG, TSHIRT, HOODIE
+Items: 1 MUG, 1 TSHIRT, 1 HOODIE
 Total: 41.00€
 ```
 
 ```
-Items: MUG, TSHIRT, MUG
+Items: 2 MUG, 1 TSHIRT
 Total: 27.00€
 ```
 
 ```
-Items: MUG, TSHIRT, MUG, MUG
+Items: 3 MUG, 1 TSHIRT
 Total: 33.00€
 ```
 
 ```
-Items: MUG, TSHIRT, TSHIRT, TSHIRT, TSHIRT, MUG, HOODIE
+Items: 2 MUG, 4 TSHIRT, 1 HOODIE
 Total: 92.00€
 ```
 
@@ -68,33 +68,53 @@ Total: 92.00€
 
 We'd like to expand our store to provide some discounted prices in some situations.
 
-- 2-for-1 (buy two, one of them is free) for the `MUG` item;
 - 30% discounts on all `TSHIRT` items when buying 3 or more.
+- Volume discount for `MUG` items:
+  - 2% discount for 10 to 19 items
+  - 4% discount for 20 to 29 items
+  - 6% discount for 30 to 39 items
+  - ... (and so forth with discounts increasing in steps of 2%)
+  - 30% discount for 150 or more items
 
 Make the necessary changes to your code to allow these discounts to be in place and to be reflected in the existing endpoints.
 
 Here's how the above price examples would be updated with these discounts:
 ```
-Items: MUG, TSHIRT, HOODIE
+Items: 1 MUG, 1 TSHIRT, 1 HOODIE
 Total: 41.00€
 ```
 
 ```
-Items: MUG, TSHIRT, MUG
-Total: 21.00€
+Items: 9 MUG, 1 TSHIRT
+Total: 69.00€
 ```
 
 ```
-Items: MUG, TSHIRT, MUG, MUG
-Total: 27.00€
+Items: 10 MUG, 1 TSHIRT
+Total: 73.80€
+
+Explanation:
+  - Total without discount: 60.00€ + 15.00€ = 75.00€
+  - Discount: 1.20€ (2% discount on MUG)
+  - Total: 75.00 - 1.20 = 73.80€
 ```
 
 ```
-Items: MUG, TSHIRT, MUG, MUG, MUG
-Total: 33.00€
+Items: 45 MUG, 3 TSHIRT
+Total: 279.90€
+
+Explanation:
+  - Total without discount: 270.00 + 45.00 = 315.00€
+  - Discount: 21.60 (8% discount on MUG) + 13.50 (30% discount on TSHIRT) = 35.10€
+  - Total: 315.00 - 35.10 = 279.90€
 ```
 
 ```
-Items: MUG, TSHIRT, TSHIRT, TSHIRT, TSHIRT, MUG, HOODIE
-Total: 68.00€
+Items: 200 MUG, 4 TSHIRT, 1 HOODIE
+Total: 902.00€
+
+Explanation:
+  - Total without discount: 1200.00 + 60.00 + 20.00 = 1280.00€
+  - Discount: 360.00 (30% discount on MUG) + 18.00 (30% discount on TSHIRT) = 378.00€
+  - Total: 1280.00 - 378.00 = 902.00€
 ```
