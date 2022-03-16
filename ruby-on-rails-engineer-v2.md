@@ -14,9 +14,9 @@ Reedsy would like to expand its business to include a merchandise store for our 
 ```
 Code         | Name                   |  Price
 -------------------------------------------------
-MUG          | Reedsy Mug             |   6.00€
-TSHIRT       | Reedsy T-shirt         |  15.00€
-HOODIE       | Reedsy Hoodie          |  20.00€
+MUG          | Reedsy Mug             |   6.00
+TSHIRT       | Reedsy T-shirt         |  15.00
+HOODIE       | Reedsy Hoodie          |  20.00
 ```
 
 We would like you to provide us with a small web application to help us manage this store.
@@ -29,7 +29,7 @@ Some important notes before diving into the specifics.
 - there are no restrictions on what dependecies you can use, but try keep them to a minimum;
 - include also with your solution:
   - instructions on how to setup and run your application;
-  - a description of the API endpoints with cURL examples
+  - a description of the API endpoints with cURL examples.
 
 ### Question 1
 
@@ -46,22 +46,22 @@ Implement an API endpoint that allows one to check the price of a given list of 
 Some examples on the values expected:
 ```
 Items: 1 MUG, 1 TSHIRT, 1 HOODIE
-Total: 41.00€
+Total: 41.00
 ```
 
 ```
 Items: 2 MUG, 1 TSHIRT
-Total: 27.00€
+Total: 27.00
 ```
 
 ```
 Items: 3 MUG, 1 TSHIRT
-Total: 33.00€
+Total: 33.00
 ```
 
 ```
 Items: 2 MUG, 4 TSHIRT, 1 HOODIE
-Total: 92.00€
+Total: 92.00
 ```
 
 ### Question 4
@@ -81,40 +81,40 @@ Make the necessary changes to your code to allow these discounts to be in place 
 Here's how the above price examples would be updated with these discounts:
 ```
 Items: 1 MUG, 1 TSHIRT, 1 HOODIE
-Total: 41.00€
+Total: 41.00
 ```
 
 ```
 Items: 9 MUG, 1 TSHIRT
-Total: 69.00€
+Total: 69.00
 ```
 
 ```
 Items: 10 MUG, 1 TSHIRT
-Total: 73.80€
+Total: 73.80
 
 Explanation:
-  - Total without discount: 60.00€ + 15.00€ = 75.00€
-  - Discount: 1.20€ (2% discount on MUG)
-  - Total: 75.00 - 1.20 = 73.80€
+  - Total without discount: 60.00 + 15.00 = 75.00
+  - Discount: 1.20 (2% discount on MUG)
+  - Total: 75.00 - 1.20 = 73.80
 ```
 
 ```
 Items: 45 MUG, 3 TSHIRT
-Total: 279.90€
+Total: 279.90
 
 Explanation:
-  - Total without discount: 270.00 + 45.00 = 315.00€
-  - Discount: 21.60 (8% discount on MUG) + 13.50 (30% discount on TSHIRT) = 35.10€
-  - Total: 315.00 - 35.10 = 279.90€
+  - Total without discount: 270.00 + 45.00 = 315.00
+  - Discount: 21.60 (8% discount on MUG) + 13.50 (30% discount on TSHIRT) = 35.10
+  - Total: 315.00 - 35.10 = 279.90
 ```
 
 ```
 Items: 200 MUG, 4 TSHIRT, 1 HOODIE
-Total: 902.00€
+Total: 902.00
 
 Explanation:
-  - Total without discount: 1200.00 + 60.00 + 20.00 = 1280.00€
-  - Discount: 360.00 (30% discount on MUG) + 18.00 (30% discount on TSHIRT) = 378.00€
-  - Total: 1280.00 - 378.00 = 902.00€
+  - Total without discount: 1200.00 + 60.00 + 20.00 = 1280.00
+  - Discount: 360.00 (30% discount on MUG) + 18.00 (30% discount on TSHIRT) = 378.00
+  - Total: 1280.00 - 378.00 = 902.00
 ```
