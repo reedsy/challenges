@@ -22,7 +22,7 @@ HOODIE       | Reedsy Hoodie          |  20.00
 We would like you to provide us with a small web application to help us manage this store.
 
 Some important notes before diving into the specifics.
-- we expect this challenge to be done using Ruby on Rails 6 or superior;
+- we expect this challenge to be done using Ruby on Rails;
 - we are not expecting your application to have a UI: assume that your work would be used to provide that at a later stage;
 - any detail that is not specified throughout this assignment is for you to decide. Our questions and examples are agnostic on purpose, so as to not bias your toward a specific format. If you work at Reedsy you will make decisions and we want that to reflect here. This being said, if you spot anything that you **really** think should be detailed here, feel free to let us know;
 - the goal of this challenge is to see if you're able to write code that follows development best practices and is maintainable. It shouldn't be too complicated (you don't need to worry about authentication, for example) but it should be solid enough to ship to production;
