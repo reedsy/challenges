@@ -28,7 +28,7 @@ Some important notes before diving into the specifics.
 - the goal of this challenge is to see if you're able to write code that follows development best practices and is maintainable. It shouldn't be too complicated (you don't need to worry about authentication, for example) but it should be solid enough to ship to production;
 - regarding dependencies:
   - try to keep them to a minimum. It's OK to add a dependency that adds a localized and easy to understand functionality;
-  - avoid dependencies that significantly break way from standard Rails or that have a big DSL to learn (e.g., [Grape](https://github.com/ruby-grape/grape)). It makes it much harder for us to evaluate the challenge if it deviates a lot from vanilla Rails. If in doubt, err on the side of using less dependencies or check with us if it's OK to use;
+  - avoid dependencies that significantly break away from standard Rails or that have a big DSL to learn (e.g., [Grape](https://github.com/ruby-grape/grape)). It makes it much harder for us to evaluate the challenge if it deviates a lot from vanilla Rails. If in doubt, err on the side of using less dependencies or check with us if it's OK to use;
 - include also with your solution:
   - instructions on how to setup and run your application;
   - a description of the API endpoints with cURL examples.
