@@ -1,4 +1,4 @@
-# Node.js Fullstack Engineer Challenge
+# Node.js Backend Engineer Challenge
 
 You can submit all the answers to this assignment in a **private**, single repository or as a zipped folder, containing markdown and code. If you use GitHub, please share your answers with [**reedsyapplications**](https://github.com/reedsyapplications).
 
@@ -66,21 +66,42 @@ Your solution should:
 - [ ] be scalable — this is a small app, but write it as if it will grow into a full, Production-grade server
 - [ ] be data store agnostic
 
-## 4. SPA
+## 4. Operation collision
 
-Using **Vue.js**, create a basic SPA that implements the following UI:
+When multiple users are collaborating on a document, collisions in their edits inevitably occur. Implement a module that can handle basic text update operations, and combine two colliding edits into a single operation.
 
-![SPA 1](./images/node_4-01.png "SPA 1")
+An operation is described as an array of any combination of three types of edits:
 
-![SPA 2](./images/node_4-02.png "SPA 2")
+- `{ skip: number }` to skip characters
+- `{ insert: string }` to insert the given string
+- `{ delete: number }` to delete a number of characters
+
+Implement the following methods:
+- `Operation.prototype.combine(operation)` Updates the operation by combining it with another colliding operation
+- `Operation.combine(op1, op2)` Static method that returns a new operation by combining the arguments without mutating them
+- `Operation.prototype.apply(string)` Applies the operation to the provided argument
+
+For example:
+
+```javascript
+const s = "abcdefg";
+const op1 = new Operation([{ skip: 1 }, { insert: "FOO" }]);
+const op2 = new Operation([{ skip: 3 }, { insert: "BAR" }]);
+
+expect(op1.apply(s)).to.equal('aFOObcdefg');
+expect(op2.apply(s)).to.equal('abcBARdefg');
+
+const combined1 = Operation.combine(op1, op2); // => [{ skip: 1 }, { insert: 'FOO' }, { skip: 2}, { insert: 'BAR' } ]
+expect(combined1.apply(s)).to.equal('aFOObcBARdefg');
+
+const combined2 = Operation.combine(op2, op1);
+// NB: This expectation is true for this specific case, but not in the general case.
+// Can you think of an example where this assertion might not be true?
+expect(combined2.apply(s)).to.equal(combined1.apply(s));
+```
 
 Your solution should:
 
-- [ ] use Vue.js
-- [ ] display 5 books per page
-- [ ] have multiple pages to have pagination
-- [ ] expand/collapse details when clicking the book
-- [ ] improve the UI as you see fit
+- [ ] use TypeScript or modern ES features
 - [ ] have reasonable test coverage
-- [ ] be scalable — this is a small app, but write it as if it will grow into a full, Production-grade SPA
-- [ ] assume books will be fetched over HTTP
+- [ ] explain any assumptions made
