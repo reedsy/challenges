@@ -8,7 +8,7 @@ The estimated time to accomplish every task sits between 10 and 15 hours, depend
 
 ## 1. About you
 
-Tell us about one of your commercial projects with Vue.js or AngularJS.
+Tell us about one of your commercial projects with Vue.js.
 
 
 ## 2. General
