@@ -8,7 +8,7 @@ Answering all the questions to a Production-level standard should take approxima
 
 ## 1. About you
 
-Tell us about one of your commercial projects with Node.js and/or Vue.js.
+Tell us about one of your commercial projects with Node.js.
 
 
 ## 2. Document versioning
