@@ -1,8 +1,12 @@
 # Node.js Fullstack Engineer Challenge
 
-You can submit all the answers to this assignment in a **private**, single repository or as a zipped folder, containing markdown and code. If you use GitHub, please share your answers with [**reedsyapplications**](https://github.com/reedsyapplications).
-
-Answering all the questions to a Production-level standard should take approximately 1 work day.
+ - Please answer questions to a **Production-level standard**: the kind of code you would expect to submit for code review with minimal comments
+ - The assignment should take approximately 1 work day
+ - Submit complete answers where possible, but if some parts of the assignment are rushed/skipped in the interests of time, please explain what you would have done, had you had more time
+ - Submit answers as a zipped folder, or in a **single, private GitHub repository** shared with [**reedsyapplications**](https://github.com/reedsyapplications)
+ - If questions seem ambiguous, please use your initiative and try to work as autonomously as possible:
+   - highlight any assumptions you've made
+   - flag things you think you would want to discuss further
 
 **For coding questions use the latest Node LTS**.
 
@@ -26,32 +30,51 @@ Your approach should:
 
 ## 3. Node.js REST API
 
-Implement a REST API using Express.js that handles Export and Import requests.
+Implement a Node.js REST API that handles Export and Import requests.
 
-The API should expose endpoints to:
-- `POST` a request for a **new Export job**. Valid requests should be saved in memory. Invalid requests should return an error. The request must have the following schema:
+### Queueing jobs
 
-  ```javascript
-  {
-    bookId: string,
-    type: "epub" | "pdf"
-  }
-  ```
+The API should expose endpoints:
 
-- `GET` a list of **Export requests**, grouped by their current `state` (see below).
-- `POST` a request for a new **Import job**. Valid requests should be saved in memory. Invalid requests should return an error. The request must have the following schema:
+- [ ] to create a new Export job
+- [ ] to create a new Import job
+- [ ] that reject invalid payloads with a clear error
 
-  ```javascript
-  {
-    bookId: string,
-    type: "word" | "pdf" | "wattpad" | "evernote",
-    url: string
-  }
-  ```
+#### Export request body:
 
-- `GET` a list of **Import requests**, grouped by their current `state` (see below).
+```typescript
+{
+  bookId: string;
+  type: "epub" | "pdf";
+}
+```
 
-Both export and import requests should be created with a `pending` state, and with a `created_at` timestamp. An import or export should take the amount of time outlined below. After the specified time, the state should be updated from `pending` to `finished` and update an `updated_at` timestamp.
+#### Import request body:
+
+```typescript
+{
+  bookId: string;
+  type: "word" | "pdf" | "wattpad" | "evernote";
+  url: string;
+}
+```
+
+### Querying jobs
+
+The API should also expose endpoints:
+
+- [ ] to list Export jobs, grouped by their current `state` (see below)
+- [ ] to list Import jobs, grouped by their current `state` (see below)
+
+### Processing jobs
+
+Jobs should:
+
+- [ ] start with `state: 'pending'`
+- [ ] have a `created_at` field
+- [ ] maintain an `updated_at` field
+
+For this exercise, please just wait for a set amount of time and then update the job's state to `finished` after the appropriate amount of time:
 
 | Job type     | Processing time (s) |
 | ------------ | ------------------- |
@@ -59,12 +82,24 @@ Both export and import requests should be created with a `pending` state, and wi
 | PDF export   | 25                  |
 | import (any) | 60                  |
 
-Your solution should:
+### Solution
 
+Your solution **should**:
+
+- [ ] be written to a Production-level standard
+- [ ] meet the specifications outlined above
 - [ ] use TypeScript or modern ES features
 - [ ] have reasonable test coverage
 - [ ] be scalable — this is a small app, but write it as if it will grow into a full, Production-grade server
-- [ ] be data store agnostic
+- [ ] have the foundation for swapping out our dummy job processors for a real job processor
+- [ ] focus more on demonstrating a Senior Developer skill set, rather than DevOps
+- [ ] highlight any assumptions you've made; uncertainties you have; or things you would have improved with more time
+
+Your solution **may**:
+
+- [ ] use whatever Node.js libraries you are most comfortable with using
+- [ ] use any datastore you want, including in-memory, but it should be clear how this would be swapped for a real datastore in Production
+- [ ] ignore the exact details of deployment: things like containerization are a nice plus, but not necessary
 
 ## 4. SPA
 
@@ -74,13 +109,23 @@ Using **Vue.js**, create a basic SPA that implements the following UI:
 
 ![SPA 2](./images/node_4-02.png "SPA 2")
 
-Your solution should:
+### Solution
 
+Your solution **should**:
+
+- [ ] be written to a Production-level standard
 - [ ] use Vue.js
 - [ ] display 5 books per page
 - [ ] have multiple pages to have pagination
 - [ ] expand/collapse details when clicking the book
-- [ ] improve the UI as you see fit
 - [ ] have reasonable test coverage
 - [ ] be scalable — this is a small app, but write it as if it will grow into a full, Production-grade SPA
 - [ ] assume books will be fetched over HTTP
+- [ ] highlight any assumptions you've made; uncertainties you have; or things you would have improved with more time
+
+Your solution **may**:
+
+- [ ] use any source data, including in-memory, but it should be clear how this would be fetched over HTTP in Production
+- [ ] include end-to-end testing on top of unit tests, but this isn't expected
+- [ ] improve the UI as you see fit
+- [ ] use styling libraries, but please use these as you would in Production
