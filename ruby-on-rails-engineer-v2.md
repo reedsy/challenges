@@ -48,7 +48,7 @@ Here's a non-exhaustive list of functionalities that you **don't** need to worry
 
 ### How do I know when to stop adding more functionalities?
 
-This challenge was designed to be doable by an experienced Rails developer in 2 to 3 hours. If you're taking considerably more time than that, maybe it's time to wrap up what you already have and ship it.
+This challenge was designed to not take too much of your precious time. If it's taking you the whole day or more, maybe it's time to wrap up what you already have and ship it.
 
 ### Question 1
 
