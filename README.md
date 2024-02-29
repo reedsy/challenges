@@ -6,3 +6,4 @@
 * [Front end Engineer Challenge](front-end.md)
 * [Data Analyst Assignment](data-analyst.md)
 * [Data Scientist Assignment](data-engineering.md)
+* [Quality Assurance Challenge](quality-assurance.md)
