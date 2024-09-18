@@ -1,27 +1,30 @@
 @import '_reset';
-@import 'colors';
-@import 'variables';
+@import 'media';
 @import 'colors';
 @import 'typography';
-@import 'media';
+@import 'variables';
+@import 'colors';
 
 body {
   @include layout;
 }
 
 .top-actions {
-  padding: 16px 32px;
+  padding: 12px 30px 24px 30px;
+  width: 100%;
 
   .container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 
   .top-logo {
     width: 198px;
-    height: 32px;
-    background: color('gray');
+    height: 30px;
+    background: color('grey');
     border-radius: $border-radius-mini;
     display: flex;
     justify-content: center;
@@ -36,11 +39,56 @@ body {
     }
 
     li {
-      padding: 8px;
-      margin: 0 8px;
+      padding: 6px 12px;
+      margin: 0 4px;
 
       &:nth-child(3) {
-        @include highlight;
+        @include accent;
+
+        a {
+          color: color('white');
+        }
+      }
+
+      &:last-child {
+        margin-right: 0
+      }
+
+      a {
+        @include link;
+      }
+    }
+  }
+
+  @include media('<tablet') {
+    padding: 12px 0;
+    
+    .top-menu {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      border-bottom: 4px solid color('black');
+      
+      &:before {
+        position: absolute;
+        right: 0;
+        top: 2px;
+        content: "";
+        border-top: 4px solid color('black');
+        width: 100%;
+      }
+
+      &:after {
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        content: "";
+        border: 2px solid color('black');
+        width: 100%;
+      }
+
+      ul {
+        display: none;
       }
     }
   }
@@ -52,13 +100,13 @@ body {
   overflow: hidden;
 
   h1 {
-    @include header;
+    @include hero;
 
     & {
       display: inline-block;
       width: 100%;
       background: color('white');
-      padding: 36px
+      padding: 30px;
     }
   }
 
@@ -66,10 +114,11 @@ body {
     position: relative;
     padding: 30px;
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
 
     .recommended {
-      @include highlight;
+      @include accent;
+      @include tiny;
 
       & {
         position: absolute;
@@ -77,7 +126,6 @@ body {
         top: 0;
         padding: 4px 8px;
         border-radius: 0 0 0 $border-radius;
-        font-size: font-size('small');
       }
     }
 
@@ -87,7 +135,158 @@ body {
       & {
         width: 260px;
         height: 396px;
+        margin-right: 18px;
+        object-fit: fill;
       }
+    }
+
+    .book-info {
+      @include book-info;
+    }
+  }
+
+  .top-voted {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background: color('white');
+
+    h2 {
+      @include subheader;
+
+      & {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .books-list {
+    padding: 20px 0 12px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    column-gap: 20px;
+
+    .book {
+      position: relative;
+      width: 33%;
+      background: color('background');
+      border-radius: $border-radius;
+      padding: 16px;
+      text-align: center;
+
+      img {
+        @include card;
+
+        width: 132px;
+        height: 198px;
+        margin-bottom: 16px;
+        object-fit: fill;
+      }
+
+      .position {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 34px;
+        height: 34px;
+        border: 2px solid color('accent');
+        border-radius: 50%;
+        color: color('accent');
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          color: color('accent');
+          font-size: font-size('medium');
+          font-weight: 600;
+        }
+      }
+
+      .book-info {
+        @include book-info(true);
+      }
+    }
+  }
+
+  @include media('>=tablet', '<laptop') {
+    .featured-book {
+      display: block;
+
+      img {
+        float: left;
+      }
+
+      .book-info {
+        display: block;
+      }
+    }
+
+    .books-list {
+      flex-flow: column;
+
+      .book {
+        display: block;
+        width: 100%;
+        margin-bottom: 24px;
+
+        img {
+          float: left;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  @include media('<tablet') {
+    .featured-book {
+      flex-flow: row wrap;
+      justify-content: center;
+      
+      img {
+        width: auto;
+        height: 400px;
+        margin-right: 0;
+      }
+    }
+
+    .books-list {
+      flex-flow: column;
+
+      .book {
+        width: 100%;
+        margin-bottom: 24px;
+
+        img {
+          width: auto;
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: color('black');
+  justify-content: center;
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  li {
+    @include tiny;
+
+    & {
+      padding: 14px 30px;
     }
   }
 }

@@ -79,7 +79,7 @@ $unit-intervals: (
 *  @include media('>=358px', '<850px') { }
 *
 * @example scss - With set breakpoints with custom values
-*  @include media('>laptop', '<=1350px') { }
+*  @include media('>tablet', '<=1350px') { }
 *
 * @example scss - With a static expression
 *  @include media('retina2x') { }

@@ -3,32 +3,29 @@ $border-radius: 8px;
 $box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 6px 4px;
 $box-shadow-mini: rgba(0, 0, 0, 0.1) 0px 1px 4px 2px;
 
-// $box-shadow: rgb(0 0 0 / 13%) 3.07px 6.29px 14px 7px;
-
 @mixin zIndex($n: 0) {
   z-index: 1 + $n;
 }
 
 @mixin layout() {
-  @include body;
-
-  & {
-    width: 100%;
-    max-width: 1600px;
-    padding: 0 128px;
-    margin: 0 auto;
-    background: color('background');
-    font-size: font-size('body');
-  }
-
-  @include media('<laptop') {
-    padding: 0 24px;
-  }
-}
-
-@mixin card-flat() {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 128px 30px;
+  margin: 0 auto;
   background: color('background');
-  border-radius: $border-radius;
+  font-size: font-size('body');
+  display: flex;
+  flex-flow: column wrap;
+
+  @include media('>=tablet', '<laptop') {
+    padding: 0 48px 30px;
+  }
+
+  @include media('<tablet') {
+    padding: 0 24px 30px;
+    max-width: 100vw;
+  }
 }
 
 @mixin card() {
@@ -36,12 +33,61 @@ $box-shadow-mini: rgba(0, 0, 0, 0.1) 0px 1px 4px 2px;
   box-shadow: $box-shadow-mini;
 }
 
-@mixin font($name: 'Montserrat') {
-  font-family: $name, sans-serif;
-}
-
-@mixin highlight() {
-  background: color('yellow');
+@mixin accent() {
+  background: color('accent');
   border-radius: $border-radius-mini;
   color: color('white', $alpha: 20%)
+}
+
+@mixin book-info($small: null) {
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+
+  .title {
+    @include header;
+
+    @if $small {
+      @include title;
+    }
+
+    @include media('>=tablet', '<laptop') {
+      margin-right: 42px;
+    }
+
+    @include media('<tablet') {
+      text-align: center;
+      margin-top: 12px;
+    }
+  }
+
+  .author {
+    @include body(color('dark-grey'));
+
+    @if $small {
+      @include tiny(color('dark-grey'));
+    }
+
+    & {
+      margin: 2px 0 8px;
+    }
+
+    @include media('<tablet') {
+      text-align: center;
+    }
+  }
+
+  .synopsis {
+    p {
+      @include body;
+
+      @if $small {
+        @include tiny(color('black'));
+      }
+
+      & {
+        margin-top: 12px;
+      }
+    }
+  }
 }

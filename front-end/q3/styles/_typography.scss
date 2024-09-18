@@ -1,87 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 $font-size: (
-  'xx-large': 40px,
-  'x-large': 22px,
-  'large': 20px, 
+  'xx-large': 42px,
+  'x-large': 32px,
+  'large': 28px, 
   'medium': 16px,
   'small': 15px,
   'x-small': 14px,
-  'xx-small': 13px,
 );
+
+@mixin font($name: 'Open Sans') {
+  font-family: $name, sans-serif;
+}
 
 @function font-size($size: 'medium') {
   @return map-get($font-size, $size);
 }
 
-@mixin header($color: color('black')) {
-  color: $color;
-  font-size: font-size('xx-large');
-  font-weight: 500;
-  line-height: 1.1;
+@mixin hero($color: color('black')) {
+  @include font('Open Sans');
+
+  & {
+    color: $color;
+    font-size: font-size('xx-large');
+    font-weight: 500;
+    line-height: 1;
+  }
   
-  @include media('<laptop') {
-    font-size: font-size('large');
+  @include media('<tablet') {
+    font-size: font-size('x-large');
   }
 }
 
-@mixin subheadline($color: color('blue-dark')) {
-  @include font;
+@mixin header($color: color('black')) {
+  @include font('Montserrat');
 
-  color: $color;
-  font-weight: 600;
-  font-size: font-size('x-large');
-  line-height: 1.1;
+  & {
+    color: $color;
+    font-weight: 800;
+    font-size: font-size('x-large');
+    line-height: 1.4;
+  }
 
-  @include media('<laptop') {
+  @include media('<tablet') {
+    font-size: font-size("large");
+  }
+}
+
+@mixin subheader($color: color('black')) {
+  @include font('Montserrat');
+
+  & {
+    color: $color;
+    font-weight: 800;
+    font-size: font-size('large');
+    line-height: 1.4;
+  }
+
+  @include media('<tablet') {
     font-size: font-size("medium");
   }
 }
 
-@mixin title($color: color('blue-dark')) {
-  @include font;
+@mixin title($color: color('black')) {
+  @include font('Montserrat');
 
-  color: $color;
-  font-weight: 600;
-  font-size: font-size('large');
-  line-height: 1.1;
-}
-
-@mixin subtitle($color: color('blue-dark')) {
-  @include font;
-
-  color: $color;
-  font-weight: 600;
-  font-size: font-size('small');
-  line-height: 1.1;
-}
-
-@mixin feedback($color: color('blue-dark')) {
-  @include font;
-
-  color: $color;
-  font-size: font-size('x-small');
-  line-height: 1.43;
-
-  @include media('<laptop') {
-    @include font;
+  & {
+    color: $color;
+    font-weight: 800;
+    font-size: font-size('x-small');
+    line-height: 1.2;
   }
 }
 
-@mixin body($color:  color('black')) {
-  @include font;
-
+@mixin body($color: color('black')) {
   color: $color;
   font-size: font-size('medium');
-  line-height: 1.5;
-
-  @include media('<laptop') {
-    font-size: font-size('small');
-  }
+  line-height: 1.2;
+  font-weight: 500;
 }
 
 @mixin link($color: color('black')) {
-  @include font;
-
   color: $color;
-  font-size: font-size('x-small');
+  font-size: font-size('medium');
   line-height: 1.1;
+  font-weight: 500;
+}
+
+@mixin tiny($color: color('white')) {
+  color: $color;
+  line-height: 1.2;
+  font-size: font-size('x-small');
+  font-weight: 500;
 }
