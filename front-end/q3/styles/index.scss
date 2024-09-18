@@ -1,0 +1,93 @@
+@import '_reset';
+@import 'colors';
+@import 'variables';
+@import 'colors';
+@import 'typography';
+@import 'media';
+
+body {
+  @include layout;
+}
+
+.top-actions {
+  padding: 16px 32px;
+
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .top-logo {
+    width: 198px;
+    height: 32px;
+    background: color('gray');
+    border-radius: $border-radius-mini;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .top-menu {
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+    }
+
+    li {
+      padding: 8px;
+      margin: 0 8px;
+
+      &:nth-child(3) {
+        @include highlight;
+      }
+    }
+  }
+}
+
+.main {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+
+  h1 {
+    @include header;
+
+    & {
+      display: inline-block;
+      width: 100%;
+      background: color('white');
+      padding: 36px
+    }
+  }
+
+  .featured-book {
+    position: relative;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+
+    .recommended {
+      @include highlight;
+
+      & {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 4px 8px;
+        border-radius: 0 0 0 $border-radius;
+        font-size: font-size('small');
+      }
+    }
+
+    img {
+      @include card;
+
+      & {
+        width: 260px;
+        height: 396px;
+      }
+    }
+  }
+}

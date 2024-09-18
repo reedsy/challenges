@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "sass:color";
+
+$palette: (
+  "black": #292929,
+  "white": #ffffff,
+  "background": #faf9f3,
+  "gray": #cccccc,
+  "yellow": #ecc005,
+);
+
+@function color(
+  $name: "blue-dark",
+  $lightness: null,
+  $alpha: null,
+  $palette: $palette
+) {
+  // Get the color
+  $color: map.get($palette, $name);
+
+  @if not($color) {
+    @warn 'Color `#{$name}` does not exist';
+  }
+
+  @if $lightness {
+    @return color.scale($color, $lightness: 100% - $lightness);
+  }
+
+  @if $alpha {
+    @return color.scale($color, $alpha: 0% - $alpha);
+  }
+
+  @return $color;
+}
+
+@function component-color($name: "primary") {
+  @return map.get($component-palette, $name);
+}

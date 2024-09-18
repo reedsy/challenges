@@ -1,0 +1,292 @@
+/* stylelint-disable */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+article,
+header,
+menu,
+section,
+time,
+video {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+div,
+article,
+aside,
+header,
+section {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+@-webkit-keyframes autofill {
+  to {
+    color: #666666;
+    background: transparent;
+  }
+}
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+/* Simple, elegant and maintainable media queries in Sass
+* http://include-media.com
+*
+* Creates a list of global breakpoints
+*
+* @author Eduardo Boucas
+*
+* @example scss - Creates a single breakpoint with the label `mobile`
+*  $breakpoints:  ('mobile': 320px);
+*/
+/* Creates a list of static expressions or media types
+*
+* @example scss - Creates a single media type (screen)
+*  $media-expressions: ('screen': 'screen');
+*
+* @example scss - Creates a static expression with logical disjunction (OR operator)
+*  $media-expressions: (
+* 		'retina2x': (
+* 			'(-webkit-min-device-pixel-ratio: 2)',
+* 			'(min-resolution: 192dpi)'
+* 		)
+* 	);
+*/
+/* Defines a number to be added or subtracted from each unit when declaring breakpoints with exclusive intervals
+*
+* @example scss - Interval for pixels is defined as `1` by default
+*  @include media('>128px') {} generates @media (min-width: 129px) {}
+*
+* @example scss - Interval for ems is defined as `0.01` by default
+*  @include media('>20em') {} generates @media (min-width: 20.01em) {}
+*
+* @example scss - Interval for rems is defined as `0.1` by default, to be used with `font-size: 62.5%;`
+*  @include media('>2.0rem') {} generates @media (min-width: 2.1rem) {}
+*/
+/* Generates a media query based on a list of conditions
+*
+* @param {List}   $conditions  - Media query conditions
+*
+* @example scss - With a single set breakpoint
+*  @include media('>mobile') { }
+*
+* @example scss - With two set breakpoints
+*  @include media('>mobile', '<=tablet') { }
+*
+* @example scss - With custom values
+*  @include media('>=358px', '<850px') { }
+*
+* @example scss - With set breakpoints with custom values
+*  @include media('>laptop', '<=1350px') { }
+*
+* @example scss - With a static expression
+*  @include media('retina2x') { }
+*
+* @example scss - Mixing everything
+*  @include media('>=350px', '<tablet', 'retina3x') { }
+*/
+/* Reads a list of media query expressions and separates logical disjunctions into different branches
+*
+* @param {List}   $expressions  - list of expressions
+*
+* @throws `$expression` is not a valid expression
+*
+* @return {List | Null}
+*/
+/*
+* Parses a string to form a media query expression
+*
+* @param {String}   $expression  - expression (in string)
+*
+* @throws Expression with type `type-of($expression)` detected, string expected
+* @throws `$expression` is missing an operator
+* @throws Unknown unit: `$unit`
+*
+* @return {String | Null}
+*/
+/*
+* Replaces the first occurence of the string with the replacement string
+*
+* @param {String}   $search  - The value being searched for
+* @param {String}   $replace  - The replacement string
+* @param {String}   $subject  - The string being replaced on
+*
+* @return {String | Null}
+*/
+/*
+* Casts a number to a string
+*
+* @param {String}   $string  - Number to be parsed
+*
+* @return {List | Null}
+*/
+/* ********************* ORIENTATION ******************* */
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #292929;
+  font-size: 16px;
+  line-height: 1.5;
+}
+@media (max-width: 1023px) {
+  body {
+    font-size: 15px;
+  }
+}
+body {
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 128px;
+  margin: 0 auto;
+  background: #faf9f3;
+}
+@media (max-width: 1023px) {
+  body {
+    padding: 0 24px;
+  }
+}
+
+.top-actions {
+  padding: 16px 32px;
+}
+.top-actions .container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.top-actions .top-logo {
+  width: 198px;
+  height: 32px;
+  background: #cccccc;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-actions .top-menu ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+.top-actions .top-menu li {
+  padding: 8px;
+  margin: 0 8px;
+}
+.top-actions .top-menu li:nth-child(3) {
+  background: #ecc005;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 6px 4px;
+  overflow: hidden;
+}
+.main h1 {
+  color: #292929;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+@media (max-width: 1023px) {
+  .main h1 {
+    font-size: 20px;
+  }
+}
+.main h1 {
+  display: inline-block;
+  width: 100%;
+  background: #ffffff;
+  padding: 36px;
+}
+.main .featured-book {
+  position: relative;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.main .featured-book .recommended {
+  background: #ecc005;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.main .featured-book .recommended {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 4px 8px;
+  border-radius: 0 0 0 8px;
+  font-size: 15px;
+}
+.main .featured-book img {
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px 2px;
+}
+.main .featured-book img {
+  width: 260px;
+  height: 396px;
+}
+
+/*# sourceMappingURL=index.css.map */

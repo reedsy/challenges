@@ -1,0 +1,47 @@
+$border-radius-mini: 4px;
+$border-radius: 8px;
+$box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 6px 4px;
+$box-shadow-mini: rgba(0, 0, 0, 0.1) 0px 1px 4px 2px;
+
+// $box-shadow: rgb(0 0 0 / 13%) 3.07px 6.29px 14px 7px;
+
+@mixin zIndex($n: 0) {
+  z-index: 1 + $n;
+}
+
+@mixin layout() {
+  @include body;
+
+  & {
+    width: 100%;
+    max-width: 1600px;
+    padding: 0 128px;
+    margin: 0 auto;
+    background: color('background');
+    font-size: font-size('body');
+  }
+
+  @include media('<laptop') {
+    padding: 0 24px;
+  }
+}
+
+@mixin card-flat() {
+  background: color('background');
+  border-radius: $border-radius;
+}
+
+@mixin card() {
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-mini;
+}
+
+@mixin font($name: 'Montserrat') {
+  font-family: $name, sans-serif;
+}
+
+@mixin highlight() {
+  background: color('yellow');
+  border-radius: $border-radius-mini;
+  color: color('white', $alpha: 20%)
+}

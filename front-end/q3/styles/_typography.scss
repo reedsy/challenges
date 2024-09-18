@@ -1,0 +1,87 @@
+$font-size: (
+  'xx-large': 40px,
+  'x-large': 22px,
+  'large': 20px, 
+  'medium': 16px,
+  'small': 15px,
+  'x-small': 14px,
+  'xx-small': 13px,
+);
+
+@function font-size($size: 'medium') {
+  @return map-get($font-size, $size);
+}
+
+@mixin header($color: color('black')) {
+  color: $color;
+  font-size: font-size('xx-large');
+  font-weight: 500;
+  line-height: 1.1;
+  
+  @include media('<laptop') {
+    font-size: font-size('large');
+  }
+}
+
+@mixin subheadline($color: color('blue-dark')) {
+  @include font;
+
+  color: $color;
+  font-weight: 600;
+  font-size: font-size('x-large');
+  line-height: 1.1;
+
+  @include media('<laptop') {
+    font-size: font-size("medium");
+  }
+}
+
+@mixin title($color: color('blue-dark')) {
+  @include font;
+
+  color: $color;
+  font-weight: 600;
+  font-size: font-size('large');
+  line-height: 1.1;
+}
+
+@mixin subtitle($color: color('blue-dark')) {
+  @include font;
+
+  color: $color;
+  font-weight: 600;
+  font-size: font-size('small');
+  line-height: 1.1;
+}
+
+@mixin feedback($color: color('blue-dark')) {
+  @include font;
+
+  color: $color;
+  font-size: font-size('x-small');
+  line-height: 1.43;
+
+  @include media('<laptop') {
+    @include font;
+  }
+}
+
+@mixin body($color:  color('black')) {
+  @include font;
+
+  color: $color;
+  font-size: font-size('medium');
+  line-height: 1.5;
+
+  @include media('<laptop') {
+    font-size: font-size('small');
+  }
+}
+
+@mixin link($color: color('black')) {
+  @include font;
+
+  color: $color;
+  font-size: font-size('x-small');
+  line-height: 1.1;
+}
