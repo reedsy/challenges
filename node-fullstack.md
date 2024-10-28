@@ -122,10 +122,10 @@ Your solution **should**:
 - [ ] be scalable — this is a small app, but write it as if it will grow into a full, Production-grade SPA
 - [ ] assume books will be fetched over HTTP
 - [ ] highlight any assumptions you've made; uncertainties you have; or things you would have improved with more time
+- [ ] use modern features of vanilla CSS or SASS. Please **do not use styling libraries** like Tailwind or Bootstrap (we want to see how you write CSS).
 
 Your solution **may**:
 
 - [ ] use any source data, including in-memory, but it should be clear how this would be fetched over HTTP in Production
 - [ ] include end-to-end testing on top of unit tests, but this isn't expected
 - [ ] improve the UI as you see fit
-- [ ] use styling libraries, but please use these as you would in Production
