@@ -8,21 +8,39 @@ The estimated time to accomplish every task sits between 10 and 15 hours, depend
 
 ## 1. About you
 
-Tell us about one of your commercial projects with Vue.js.
+### Project Overview
+
+Tech Stack: Vue.js, Vuetify, Vuex, Chart.js
+Industry: Business Intelligence & AI
+Type: Progressive Web App (PWA)
+
+At LTPlabs, I led the front-end development of AIR, a SaaS Vue PWA for AI-driven business intelligence. Built from scratch using Vue.js, Vuetify, Vuex, and Chart.js, the platform provided interactive data visualization and workflow automation. I designed a low-code flowchart-based UI, improving usability for non-technical users. I implemented PWA features like offline support. With no dedicated designer, I also contributed to UI/UX decisions, ensuring a seamless user experience.
 
 
 ## 2. General
 
 ##### 2.1. What kind of front end projects do you enjoy working on? Why?
 
+I enjoy working on interactive web applications that enrich the user experience and also on its UI components ensuring consistency, maintainability and scalability across the application. These projects allow me to combine UI/UX design and development skills, which is something I’m passionate about.
+
 ##### 2.2. Which are your favorite features of HTML5? How have you used them before?
+
+SVG: It's a vector image format that stays sharp at any size and that's why I love it. It supports interactivity, animations, and works better than PNG or JPG for scalable graphics. I've used it Apache Echarts, a chart library, as a render option. Also use it always in logos.
+
+Web Sockets: In terms of UX its a winner for users, and that's why I love this feature. I just don't have experience with it but I can understand its potencial. One of my goals this year is to apply this technology to my portfolio website so that I can gain experience with it and enhance my portfolio UX.
+
+Semantic Elements: They basically help to structure HTML and it improves readability. Also gives meaning to web content, improves SEO, accessibility, and maintainability. I use it a lot when developing any front end application througout my career.
 
 ##### 2.3. Explain the difference between creating a DOM element setting `innerHTML` and using `createElement`.
 
+`innerHTML` is prone to XSS attacks and forces the browser to reparse the entire content and `createElement` is safer because it creates a new DOM element without attacks risks or to reparse it all, so `createElement` is better to use. 
+
 ##### 2.4. Compare two-way data binding vs one-way data flow.
 
-##### 2.5. Why is asynchronous programming important in JavaScript?
+When talking about two-way data binding the UI and application state are linked, so what changes in the UI is update the state, and changes in the state update the UI automatically. On the contrary to this, one-way data flow is when the data flows in a single direction, from the application state to the UI.
 
+##### 2.5. Why is asynchronous programming important in JavaScript?
+Javascript is single threaded, so it can only execute one task at a time in a single sequence. So the benefit of using it allows multiple operations to run in the background and fetches data without blocking other tasks. So it enhances the UX and makes the applications smoother and faster.
 
 ## 3. Styling
 
