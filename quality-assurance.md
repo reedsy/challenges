@@ -38,6 +38,7 @@ You **should**:
   - [ ] write a **passing** test for a working feature
   - [ ] explain why this passing test is worthwhile
   - [ ] write robust, maintainable tests
+  - [ ] should not rely on the test environment having stable data
 
 You **may**:
 
