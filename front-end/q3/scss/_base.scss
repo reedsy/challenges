@@ -1,0 +1,12 @@
+@use 'variables';
+
+body {
+    background-color: variables.$body-background-color;
+    color: variables.$text-color;
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: variables.$text-color;
+}

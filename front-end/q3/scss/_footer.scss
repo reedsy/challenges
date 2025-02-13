@@ -1,0 +1,34 @@
+@use 'variables';
+@use 'flexbox';
+
+footer {
+    background-color: variables.$footer-background-color;
+    color: variables.$footer-menu-item-color;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    ul {
+        list-style-type: none;
+        @include flexbox.flexbox;
+        @include flexbox.justify-content(center);
+        padding: 0;
+        margin-bottom: 0;
+
+        li {
+            padding: 10px;
+            margin: 0 30px;
+            cursor: pointer;
+
+            &:active,
+            &:hover {
+                transition: color 0.3s ease;
+                color: variables.$footer-menu-item-color-active-hover;
+                border-radius: variables.$box-border-radius;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@use 'variables';
+@use 'flexbox';
+
+header {
+    @include flexbox.flexbox;
+    @include flexbox.justify-content(space-between);
+    width: 100%;
+    padding: 0 30px;
+    align-items: baseline;
+    background-color: variables.$header-background-color;
+    font-size: 14px;
+
+    .top-logo {
+        width: 200px;
+        height: 30px;
+        background-color: variables.$logo-background-color;
+        @include flexbox.flexbox;
+        @include flexbox.justify-content(center);
+        @include flexbox.align-items(center);
+        text-decoration: none;
+        color: variables.$text-color;
+        border-radius: variables.$box-border-radius;
+    }
+
+    ul {
+        @include flexbox.flexbox;
+        list-style-type: none;
+
+        &:first-child {
+            margin-right: 20px;
+        }
+
+        li {
+            padding: 10px;
+            margin: 8px 5px;
+            cursor: pointer;
+
+            &:active,
+            &:hover {
+                transition: background-color 0.3s ease;
+                background-color: variables.$menu-item-background-color-active-hover;
+                color: variables.$menu-item-color-active-hover;
+                border-radius: variables.$box-border-radius;
+            }
+        }
+
+    }
+}
