@@ -1,5 +1,6 @@
 @use 'variables';
 @use 'flexbox';
+@use 'media-queries';
 
 section.content {
     background-color: variables.$main-background-color;
@@ -19,6 +20,10 @@ article.featured-book {
     background-color: variables.$book-item-background-color;
     position: relative;
     overflow: hidden;
+
+    @include media-queries.for-phone-only {
+        @include flexbox.flex-direction(column);
+    }
 
     .recommended {
         position: absolute;
@@ -54,6 +59,18 @@ article.featured-book {
             font-size: 14px;
             margin: 10px 0;
         }
+
+        @include media-queries.for-phone-only {
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    @include media-queries.for-phone-only {
+        .book-info {
+            width: 100%;
+        }
     }
 }
 
@@ -82,7 +99,7 @@ article.top-voted {
             font-weight: bold;
             font-size: 16px;
             width: 30px;
-            height: 30px;  
+            height: 30px;
             @include flexbox.flexbox;
             @include flexbox.justify-content(center);
             @include flexbox.align-items(center);
