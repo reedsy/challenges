@@ -1,9 +1,10 @@
 # Front end Engineer Challenge
 
 Submit all the answers by creating a **private** GitHub repository and sharing it with **reedsyapplications**. Alternatively, you can submit a zipped folder with all the answers.
-Your submission should include markdown and code and each answer should be in it's own folder.
-
-The estimated time to accomplish every task sits between 10 and 15 hours, depending on your experience.
+- Your submission should include markdown and code and each answer should be in it's own directory.
+- The estimated time to accomplish every task sits between 10 and 15 hours, depending on your experience.
+- We expect your answers to be as polished as possible. Please write down and include any assumptions you've made as well as notes on decisions and things you would improve or add in the future.
+- The bonus features, though not mandatory, might be taken into consideration as a deciding factor between candidates.
 
 
 ## 1. About you
@@ -34,9 +35,11 @@ Given the HTML file **front-end/q3/q3.html**, implement the styling so the page 
 - Implement styling rules that consider different screen sizes.
 
 **Notes:**
-- The footer should stick to the bottom when scrolling;
-- You can, and should, use a CSS pre-processor, such as SASS or LESS;
-- Avoid changing the template, your answer should only style the given HTML.
+1. This answer aims to evaluate the ability to replicate a given mockup, as close as possible, without any given details or measurements, it's intended;
+2. Avoid changing the template; your answer should only style the given HTML;
+3. The footer should stick to the bottom when scrolling;
+4. You should use a CSS pre-processor, such as SASS or LESS.
+
 
 
 ## 4. SPA
@@ -47,9 +50,9 @@ Using Vue.js, implement an SPA that gets information from a server (explained be
 ### Books list
 
 Display all available books returned from the API.
-- Synopsis should be truncated at 200 characters.
-- Book's title and cover should link to the book's individual page.
-- Though the upvote functionality is not required, the upvote state should be represented.
+1. Synopsis should be truncated at 200 characters.
+2. Book's title and cover should link to the book's individual page.
+3. Though the upvote functionality is not required, the upvote state should be represented.
 
 ![Books list](./front-end/q4/images/books-list.png "Books list")
 
@@ -65,18 +68,19 @@ For this question, you **don't** have to replicate the example screens above, fe
 
 
 **Important notes:**
-- Do not change or submit the server code, your answer should focus on the client application only;
-- Add test coverage as you see fit;
-- You may use TypeScript instead of plain JS;
-- Use a CSS pre-processor;
-- Your app must be responsible for all of it's dependencies and they should be installed via `yarn` or `npm install`. The app must run by using either `yarn start` or `npm start`.
+1. Do not change or submit the server code, your answer should focus on the client application only;
+2. Add test coverage as you see fit;
+3. You may use TypeScript instead of plain JS;
+4. Use a CSS pre-processor;
+5. Your app must be responsible for all of it's dependencies and they should be installed via `yarn` or `npm install`. The app must run by using either `yarn start` or `npm start`;
+6. Your code should be polished and as close to production-level as possible.
 
 
 #### Bonus
 
-- Implement text search on the books list (for title and synopsis)
-- Add pagination on the books list
-- Add a comments section on the book page
+1. Implement text search on the books list (for title and synopsis);
+2. Add pagination on the books list;
+3. Add a comments section on the book page (UI part only).
 
 
 ### Server
