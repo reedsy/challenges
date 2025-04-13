@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Enables modern JS features
+    "module": "CommonJS", // Jest uses CommonJS
+    "moduleResolution": "node", // Resolves modules like Node
+    "esModuleInterop": true, // Enables default imports like `import express from 'express'`
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist" // Optional: compile output directory
+  },
+  "include": ["src", "tests"]
+}
