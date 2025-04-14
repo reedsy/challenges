@@ -1,6 +1,6 @@
 # Front end Engineer Challenge
 
-Submit all the answers by creating a **private** GitHub repository and sharing it with **reedsyapplications**. Alternatively, you can submit a zipped folder with all the answers.
+Submit all the answers by creating a **private** GitHub repository and sharing it with [**reedsyapplications**](https://github.com/reedsyapplications). Alternatively, you can submit a zipped folder with all the answers.
 - Your submission should include markdown and code and each answer should be in it's own directory.
 - The estimated time to accomplish every task sits between 10 and 15 hours, depending on your experience.
 - We expect your answers to be as polished as possible. Please write down and include any assumptions you've made as well as notes on decisions and things you would improve or add in the future.
