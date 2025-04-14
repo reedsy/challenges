@@ -1,5 +1,7 @@
 # Quality Assurance
 
+Submit all the answers by creating a **private** GitHub repository and sharing it with [**reedsyapplications**](https://github.com/reedsyapplications). Alternatively, you can submit a zipped folder with all the answers.
+
 ## 1. About you
 
 Tell us briefly (2-5 paragraphs) about your experience testing a commercial project.
