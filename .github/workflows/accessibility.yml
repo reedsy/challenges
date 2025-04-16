@@ -31,6 +31,7 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test tests/accessibility
+        working-directory: qa
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
