@@ -12,7 +12,14 @@
 
 The browser based tests can be found in the directory named `browser` within the `tests` directory.
 
-## To run all tests
+## To begin
+
+- Install Node.js v20
+- cd qa/
+- npm install
+- npm start
+
+## To run tests
 
 To run the tests using Playwright:
 

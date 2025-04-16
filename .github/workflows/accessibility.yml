@@ -1,4 +1,4 @@
-name: Browser Tests
+name: Accessibility Tests
 on:
   push:
     branches: [main, master]
@@ -30,7 +30,7 @@ jobs:
         working-directory: qa
 
       - name: Run Playwright tests
-        run: npx playwright test/browser
+        run: npx playwright test/accessibility
         working-directory: qa
 
       - uses: actions/upload-artifact@v4

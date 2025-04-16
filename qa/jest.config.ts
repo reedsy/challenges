@@ -7,7 +7,7 @@ const config: Config = {
     "^.+\\.ts$": "ts-jest",
   },
   moduleFileExtensions: ["ts", "js"],
-  testMatch: ["**/tests/**/*.spec.ts"],
+  testMatch: ["**/qa/tests/integration/**/*.spec.ts"],
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: "coverage",
