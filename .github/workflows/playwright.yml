@@ -30,7 +30,7 @@ jobs:
         working-directory: qa
 
       - name: Run Playwright tests
-        run: npx playwright test/browser
+        run: npx playwright test tests/browser
         working-directory: qa
 
       - uses: actions/upload-artifact@v4

@@ -30,8 +30,7 @@ jobs:
         working-directory: qa
 
       - name: Run Playwright tests
-        run: npx playwright test/accessibility
-        working-directory: qa
+        run: npx playwright test tests/accessibility
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
