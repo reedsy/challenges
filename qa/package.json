@@ -18,6 +18,7 @@
     "packages/*"
   ],
   "dependencies": {
+    "@axe-core/playwright": "^4.10.1",
     "concurrently": "^8.2.2"
   },
   "devDependencies": {
