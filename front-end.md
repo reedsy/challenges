@@ -39,6 +39,7 @@ Given the HTML file **front-end/q3/q3.html**, implement the styling so the page 
 2. Avoid changing the template; your answer should only style the given HTML;
 3. The footer should stick to the bottom when scrolling;
 4. You should use a CSS pre-processor, such as SASS or LESS.
+5. Please **do not use styling libraries** like Tailwind or Bootstrap.
 
 
 
