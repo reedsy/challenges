@@ -13,7 +13,7 @@ There's a simple Node.js bookshelf app in the `qa/` directory.
 
 To run it:
 
-  1. [Install Node.js v20](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
+  1. [Install Node.js v24](https://nodejs.org/en/download)
   2. `cd qa/`
   3. `npm install`
   4. `npm start`
