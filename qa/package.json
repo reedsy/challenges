@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "20.11.1"
+    "node": "^24.14.1"
   },
   "scripts": {
     "start": "concurrently 'npm:start:frontend' 'npm:start:server'",
